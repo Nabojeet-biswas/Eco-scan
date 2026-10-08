@@ -93,7 +93,7 @@ This is not an image.
 ## 🛠️ Project Structure
 
 ```
-rtk_query/
+ecoscan-frontend/
 ├── api.http                         # HTTP Client request specification
 ├── .env                             # Environment configuration (VITE_API_BASE_URL)
 ├── src/
