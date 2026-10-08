@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoScan AI - TechVista 2026 Presentation | Siliguri Government Polytechnic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+    .slide.active {
+      display: flex;
+    }
+    @media print {
+      body { background: white; }
+      .controls { display: none !important; }
+      .slide { display: flex !important; page-break-after: always; height: 100vh; }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col justify-between overflow-hidden select-none">
+
+  <!-- Main Slides Viewport Container -->
+  <main id="slide-container" class="flex-1 w-full flex items-center justify-center p-4 sm:p-8">
+
+    <!-- SLIDE 1: Title -->
+    <section class="slide active flex-col justify-between bg-gradient-to-br from-[#064E3B] via-[#043527] to-[#022c22] rounded-3xl p-8 sm:p-12 border border-emerald-500/30 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div class="flex items-start justify-between">
+        <div>
+          <span class="px-3.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-xs font-black tracking-widest uppercase">
+            SILIGURI GOVERNMENT POLYTECHNIC (Govt. of West Bengal)
+          </span>
+          <p class="text-xs text-emerald-200 mt-2 font-semibold">TechVista 2026 • Inter-Department Technical Model Competition</p>
+        </div>
+        <span class="px-3 py-1 rounded-xl bg-white/10 text-white text-xs font-bold border border-white/10">Friday, 9th Oct 2026</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center my-auto">
+        <div class="md:col-span-8 space-y-4">
+          <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tight leading-none">
+            EcoScan <span class="text-emerald-400">AI</span>
+          </h1>
+          <p class="text-xl sm:text-2xl font-bold text-emerald-300">
+            AI-Powered Smart Waste Sorting & Recycling Assistant
+          </p>
+          <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md space-y-1">
+            <p class="text-sm font-bold text-amber-300">Theme: "From Ideas to Impact: Building a Sustainable Future"</p>
+            <p class="text-xs text-slate-300 italic">Think Green • Build Better • For a Sustainable Tomorrow | Small Steps, Big Change</p>
+          </div>
+          <div class="pt-2 flex flex-wrap gap-4 text-xs font-semibold text-slate-200">
+            <div class="bg-black/30 px-3.5 py-2 rounded-xl border border-white/10">
+              <span class="text-emerald-400 block font-bold">1. Dhruba Bachhar</span>
+            </div>
+            <div class="bg-black/30 px-3.5 py-2 rounded-xl border border-white/10">
+              <span class="text-emerald-400 block font-bold">2. Nabojeet Biswas</span>
+            </div>
+            <div class="bg-black/30 px-3.5 py-2 rounded-xl border border-white/10">
+              <span class="text-emerald-400 block font-bold">3. Subrata Roy</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 font-medium">Department of Computer Science and Technology (CST) • Mentor: Faculty Advisor, CST</p>
+        </div>
+        <div class="md:col-span-4 flex justify-center">
+          <img src="screenshots/techvista_poster.jpg" alt="TechVista Poster" class="rounded-2xl shadow-2xl border-2 border-emerald-400/40 max-h-[360px] object-contain">
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-emerald-400/70 border-t border-emerald-500/20 pt-4">
+        <span>Slide 1 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: Overview -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Project Overview</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Introduction & Core Mission</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="p-6 rounded-2xl bg-slate-800/80 border border-slate-700 space-y-3">
+          <h3 class="text-lg font-bold text-emerald-400 flex items-center gap-2">🌱 The EcoScan Solution</h3>
+          <ul class="text-sm text-slate-300 space-y-3">
+            <li>• <strong>Instant Vision Recognition:</strong> Snap a photo or choose an image to classify municipal waste in &lt;2 seconds.</li>
+            <li>• <strong>4-Bin Municipal Matching:</strong> Assigns items cleanly to Green (Recyclable), Blue (Landfill), Brown (Organic), or Purple (Hazardous).</li>
+            <li>• <strong>Actionable Prep Advice:</strong> Practical tips such as removing bottle caps, rinsing milk cartons, or crushing soda cans.</li>
+            <li>• <strong>Gamified Sorting:</strong> Tap-to-sort challenge reinforces habits with real-time score points and browser streaks.</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 space-y-3">
+          <h3 class="text-lg font-bold text-emerald-300 flex items-center gap-2">🎯 TechVista Alignment</h3>
+          <ul class="text-sm text-slate-300 space-y-3">
+            <li>• <strong>Theme Alignment:</strong> Directly delivers "From Ideas to Impact: Building a Sustainable Future".</li>
+            <li>• <strong>Zero Hardware Barrier:</strong> Runs universally across smartphones, tablets, and laptops without special sensors.</li>
+            <li>• <strong>Exhibition Resilience:</strong> Built-in 9-item Demo Mode guarantees 100% booth uptime even without internet access.</li>
+            <li>• <strong>Civic Education:</strong> Transforms confusing recycling guidelines into an engaging 5-second habit.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 2 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Problem Statement -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-rose-400 tracking-wider uppercase">Civic Challenge</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Problem Statement: The Segregation Crisis</h2>
+        <div class="w-16 h-1 bg-rose-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="p-6 rounded-2xl bg-rose-950/30 border border-rose-500/30 space-y-3">
+          <h3 class="text-lg font-bold text-rose-400">⚠️ Current Ground Realities</h3>
+          <ul class="text-sm text-slate-300 space-y-3">
+            <li>• <strong>High Landfill Contamination:</strong> Over 60% of recyclable plastic ends up dumped in open landfills because wet kitchen waste contaminates clean paper & dry plastics.</li>
+            <li>• <strong>Confusion at Point-of-Disposal:</strong> Citizens guess which bin to use; composite packaging (chips packets, lined cups) causes frequent errors.</li>
+            <li>• <strong>Hazardous Chemical Leaching:</strong> Lithium batteries, tube lights, and e-waste dumped into ordinary bins leach toxic lead into groundwater.</li>
+            <li>• <strong>Lack of Feedback:</strong> No instant feedback exists to motivate correct segregation habits.</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-blue-950/30 border border-blue-500/30 space-y-3">
+          <h3 class="text-lg font-bold text-blue-400">💡 Why Software & AI?</h3>
+          <ul class="text-sm text-slate-300 space-y-3">
+            <li>• <strong>Computer Vision Accuracy:</strong> Google Gemini Vision analyzes visual polymers, packaging labels, and material condition instantly.</li>
+            <li>• <strong>Zero Additional Hardware:</strong> No expensive robotic conveyors needed for consumer awareness; works directly on personal phones.</li>
+            <li>• <strong>Immediate Educational Guidance:</strong> Gives exact instructions (e.g. "Rinse food residue", "Do not puncture battery").</li>
+            <li>• <strong>Habit Reinforcement:</strong> Gamified points and streaks make civic cleanliness rewarding.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 3 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Objectives & Scope -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Project Boundaries</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Objectives & Technical Scope</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+        <div class="p-5 rounded-2xl bg-slate-800/60 border border-emerald-500/30 space-y-2">
+          <h3 class="text-base font-bold text-emerald-400">✔ Functional Scope</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5">
+            <li>• Live camera viewfinder & photo upload</li>
+            <li>• Multimodal Gemini AI item classification</li>
+            <li>• 4-bin municipal matching engine</li>
+            <li>• Multi-waste detection (3 items in 1 photo)</li>
+            <li>• Tap-to-sort game with score & streaks</li>
+            <li>• LocalStorage persistent Eco Points</li>
+            <li>• Offline exhibition demo catalog</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/60 border border-blue-500/30 space-y-2">
+          <h3 class="text-base font-bold text-blue-400">⚡ Non-Functional Scope</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5">
+            <li>• <strong>Latency:</strong> Inference response in &lt; 2 seconds</li>
+            <li>• <strong>Security:</strong> API key strictly hidden in backend</li>
+            <li>• <strong>Responsive:</strong> Flawless on phone, tablet & desktop</li>
+            <li>• <strong>Resilience:</strong> Auto-fallback if AI limits exceeded</li>
+            <li>• <strong>Reliability:</strong> 37/37 passing backend JUnit tests</li>
+            <li>• <strong>Clean Code:</strong> Modular RTK slices & Spring services</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/60 border border-amber-500/30 space-y-2">
+          <h3 class="text-base font-bold text-amber-400">⏳ Phase 2 Boundaries</h3>
+          <ul class="text-xs text-slate-300 space-y-2.5">
+            <li>• User cloud login accounts & DB sync</li>
+            <li>• Physical smart-bin robotic servo lids</li>
+            <li>• Ultrasonic fill-level hardware sensors</li>
+            <li>• Regional Bengali & Hindi voice guidance</li>
+            <li>• Municipal GIS ward collection heatmap</li>
+            <li>• Offline on-device TensorFlow Lite model</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 4 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Architecture -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">System Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Client - Server - AI Pipeline</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto items-center">
+        <div class="p-6 rounded-2xl bg-emerald-950/40 border-2 border-emerald-500/50 space-y-2 text-center">
+          <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-300">1. Client Frontend</span>
+          <h4 class="text-lg font-black text-white mt-1">React 19 + RTK Query</h4>
+          <p class="text-xs text-slate-300 text-left">
+            • Camera & drag-and-drop input<br>
+            • Redux Toolkit state cache<br>
+            • LocalStorage (Eco Points)<br>
+            • Tailwind CSS v4 responsive UI<br>
+            • Gamified 4-bin sort challenge
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-blue-950/40 border-2 border-blue-500/50 space-y-2 text-center">
+          <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-400/20 text-blue-300">2. Backend Gateway</span>
+          <h4 class="text-lg font-black text-white mt-1">Spring Boot 3 (Port 8080)</h4>
+          <p class="text-xs text-slate-300 text-left">
+            • ImageValidator (MIME & 5MB)<br>
+            • GeminiService (AI prompt & parser)<br>
+            • DemoService (9 offline items)<br>
+            • GlobalExceptionHandler (RFC format)<br>
+            • Secure API key isolation
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-amber-950/40 border-2 border-amber-500/50 space-y-2 text-center">
+          <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-amber-400/20 text-amber-300">3. AI Vision Service</span>
+          <h4 class="text-lg font-black text-white mt-1">Google Gemini Vision</h4>
+          <p class="text-xs text-slate-300 text-left">
+            • Multimodal image-to-JSON<br>
+            • Material polymer detection<br>
+            • 4-bin classification schema<br>
+            • Multi-waste array parser<br>
+            • Zero API key exposure to browser
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300">
+        <strong class="text-emerald-400">Dual-Pathway Resilience:</strong> Normal mode calls <code class="text-amber-300">POST /api/scan</code> ➔ Gemini Vision. In poor network or exhibition booth demonstrations, the frontend seamlessly utilizes <code class="text-emerald-300">GET /api/demo</code> with zero delay.
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 5 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Tech Stack -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Engineering Tools</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Technology Stack & Libraries</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-auto">
+        <div class="p-5 rounded-2xl bg-slate-800/70 border border-emerald-500/40 space-y-2">
+          <h4 class="font-bold text-emerald-400 text-sm">Frontend Web</h4>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• React 19</li>
+            <li>• Redux Toolkit (RTK)</li>
+            <li>• RTK Query (caching)</li>
+            <li>• Tailwind CSS v4</li>
+            <li>• Lucide React icons</li>
+            <li>• Redux Persist</li>
+            <li>• Vite 8 Build Tool</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/70 border border-blue-500/40 space-y-2">
+          <h4 class="font-bold text-blue-400 text-sm">Backend Server</h4>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Java 21 LTS</li>
+            <li>• Spring Boot 3.4.3</li>
+            <li>• Spring WebClient</li>
+            <li>• Jackson JSON Parser</li>
+            <li>• Maven Build Tool</li>
+            <li>• CORS Security Config</li>
+            <li>• JUnit 5 & Mockito</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/70 border border-amber-500/40 space-y-2">
+          <h4 class="font-bold text-amber-400 text-sm">AI & Cloud</h4>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Google Gemini Vision</li>
+            <li>• Multimodal Prompting</li>
+            <li>• Structured JSON Output</li>
+            <li>• 4-Bin Matching Rules</li>
+            <li>• Multi-Waste Parsing</li>
+            <li>• Zero Client Key Leakage</li>
+            <li>• Demo Catalog Fallback</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800/70 border border-purple-500/40 space-y-2">
+          <h4 class="font-bold text-purple-400 text-sm">Dev & Testing</h4>
+          <ul class="text-xs text-slate-300 space-y-1.5">
+            <li>• Git & GitHub</li>
+            <li>• VS Code & IntelliJ</li>
+            <li>• pnpm Package Manager</li>
+            <li>• Chrome & Edge DevTools</li>
+            <li>• Headless Edge CLI</li>
+            <li>• REST Client (.http)</li>
+            <li>• PptxGenJS (Slides)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 6 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Data Models -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Data Architecture</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Data Models & REST Contracts</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto font-mono text-xs">
+        <div class="p-5 rounded-2xl bg-slate-950 border border-slate-700 space-y-2 text-slate-300">
+          <h4 class="text-emerald-400 font-bold font-sans text-sm">WasteResult (DTO Contract)</h4>
+          <pre class="bg-black/50 p-3 rounded-xl overflow-x-auto text-[11px] text-emerald-300">
+{
+  "itemName": "Plastic Water Bottle",
+  "category": "Plastic (PET #1)",
+  "bin": "recyclable",
+  "tip": "Empty remaining liquid and crush bottle",
+  "warning": "Separate plastic cap before recycling",
+  "confidenceScore": 0.96,
+  "recyclable": true
+}</pre>
+          <p class="text-[11px] font-sans text-slate-400">MultiWasteResult wraps multiple items with <code class="text-amber-300">totalDetected</code>, <code class="text-amber-300">items[]</code>, and <code class="text-amber-300">primaryItem</code>.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-950 border border-slate-700 space-y-2 text-slate-300">
+          <h4 class="text-blue-400 font-bold font-sans text-sm">Spring Boot REST Endpoints</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><span class="text-emerald-400 font-bold">GET</span> /api/status ➔ System health & AI readiness</li>
+            <li><span class="text-amber-400 font-bold">POST</span> /api/scan ➔ Multipart image upload & AI inference</li>
+            <li><span class="text-emerald-400 font-bold">GET</span> /api/demo ➔ 9 pre-analyzed demo items catalog</li>
+            <li><span class="text-emerald-400 font-bold">GET</span> /api/demo/{id} ➔ Detailed single demo breakdown</li>
+            <li><span class="text-emerald-400 font-bold">GET</span> /api/demo/multi ➔ 3-item multi-waste picnic combo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 7 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Flowchart -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">System Flow</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">End-to-End Processing Workflow</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-5 gap-3 my-auto text-center">
+        <div class="p-4 rounded-xl bg-slate-800 border border-slate-700 space-y-2">
+          <span class="text-xs font-black text-emerald-400">STEP 1</span>
+          <h5 class="font-bold text-sm text-white">Capture Photo</h5>
+          <p class="text-[11px] text-slate-400">User takes camera snapshot or selects file (&lt;5MB)</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border border-slate-700 space-y-2">
+          <span class="text-xs font-black text-blue-400">STEP 2</span>
+          <h5 class="font-bold text-sm text-white">Validation</h5>
+          <p class="text-[11px] text-slate-400">Spring Boot checks image MIME type & file integrity</p>
+        </div>
+        <div class="p-4 rounded-xl bg-emerald-950/50 border border-emerald-500/50 space-y-2">
+          <span class="text-xs font-black text-emerald-300">STEP 3</span>
+          <h5 class="font-bold text-sm text-white">Gemini Vision</h5>
+          <p class="text-[11px] text-slate-300">AI extracts item name, polymer & municipal bin</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border border-slate-700 space-y-2">
+          <span class="text-xs font-black text-amber-400">STEP 4</span>
+          <h5 class="font-bold text-sm text-white">3-Layer Result</h5>
+          <p class="text-[11px] text-slate-400">Renders bin color, degradation facts & prep tips</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border border-slate-700 space-y-2">
+          <span class="text-xs font-black text-purple-400">STEP 5</span>
+          <h5 class="font-bold text-sm text-white">Sort & Earn</h5>
+          <p class="text-[11px] text-slate-400">Tap-to-sort game awards +10 Eco Points to LocalStorage</p>
+        </div>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-emerald-900/30 border border-emerald-500/30 text-xs text-center text-emerald-300 font-semibold">
+        Camera Snap ➔ ImageValidator ➔ Gemini Vision ➔ 3-Layer Visual Card ➔ 4-Bin Sort Game ➔ Persistent Points
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 8 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Key Modules -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Application Modules</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Core Functional Modules</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 my-auto">
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">1. AI Waste Scanner</h4>
+          <p class="text-xs text-slate-300">Live webcam stream, camera flip, drag-and-drop upload zone, and animated scan feedback.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">2. 3-Layer Result Visualizer</h4>
+          <p class="text-xs text-slate-300">Layer 1 (Bin recommendation), Layer 2 (Fast facts & degradation time), Layer 3 (Preparation steps).</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">3. Multi-Waste Detection</h4>
+          <p class="text-xs text-slate-300">Identifies multiple discards in one photo (bottle + can + banana peel) with an interactive queue picker.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">4. Gamified Sort Game</h4>
+          <p class="text-xs text-slate-300">4 color-coded municipal bins, real-time score tracker, dynamic streak counters, and feedback audio.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">5. Municipal Bin Guide</h4>
+          <p class="text-xs text-slate-300">Comprehensive directory for municipal bin colors with accepted items and hazardous alerts.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/70 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 text-sm">6. Offline Demo Engine</h4>
+          <p class="text-xs text-slate-300">9 pre-analyzed demo items catalog ensuring 100% demonstration uptime during technical exhibitions.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 9 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 10: Screens 1 (Home & Scanner) -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Live UI Screenshots</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Screens: Landing Page & AI Scanner</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_home.png" alt="Home Page" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-emerald-400 block font-bold">Homepage ( / )</strong>
+            Nature-inspired hero banner, real-time civic stats, quick 3-step explainer card, and instant scan CTA.
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_scan.png" alt="Scan Page" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-blue-400 block font-bold">AI Scanner ( /scan )</strong>
+            Webcam input, drag-and-drop zone, authentic sample image presets, and animated Gemini scanning progress.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 10 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Screens 2 (Result & Multi) -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Live UI Screenshots</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Screens: 3-Layer Result & Multi-Waste</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_result.png" alt="Result View" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-emerald-400 block font-bold">3-Layer Result ( /demo/plastic-bottle )</strong>
+            Layer 1 (Green Bin classification), Layer 2 (PET facts & 450-yr degradation), Layer 3 (detachable cap guide).
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_multi.png" alt="Multi Waste View" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-purple-400 block font-bold">Multi-Waste Demo ( /demo/multi )</strong>
+            Detects 3 separate items (Bottle, Can, Banana Peel) in a single image with interactive item picker.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 11 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 12: Screens 3 (Game & Bins) -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Live UI Screenshots</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Screens: Sorting Game & Bin Guide</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_game.png" alt="Game View" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-amber-400 block font-bold">Interactive Sorting Challenge ( /game )</strong>
+            4 color-coded municipal bins, real-time score tracker, dynamic streak counters, and feedback audio.
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <img src="screenshots/screenshot_bins.png" alt="Bins View" class="rounded-xl border border-slate-700 shadow-xl max-h-[300px] w-full object-cover">
+          <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700 text-xs text-slate-300">
+            <strong class="text-emerald-400 block font-bold">Municipal Bin Guide ( /bins )</strong>
+            Detailed civic directory for Green, Blue, Brown, and Purple bins with accepted and forbidden items.
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 12 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 13: Methodology -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Development Lifecycle</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Methodology: Agile Sprints</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-5 gap-3 my-auto">
+        <div class="p-4 rounded-xl bg-slate-800 border-t-4 border-emerald-500 space-y-2">
+          <span class="text-xs font-black text-emerald-400">SPRINT 1</span>
+          <h5 class="font-bold text-sm text-white">Plan & Design</h5>
+          <p class="text-[11px] text-slate-300">Requirements analysis, UI wireframes, municipal bin classification study.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border-t-4 border-teal-500 space-y-2">
+          <span class="text-xs font-black text-teal-400">SPRINT 2</span>
+          <h5 class="font-bold text-sm text-white">Frontend UI</h5>
+          <p class="text-[11px] text-slate-300">React 19 setup, Tailwind CSS v4 design, webcam viewfinder integration.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border-t-4 border-amber-500 space-y-2">
+          <span class="text-xs font-black text-amber-400">SPRINT 3</span>
+          <h5 class="font-bold text-sm text-white">AI Vision</h5>
+          <p class="text-[11px] text-slate-300">Google Gemini Vision integration, structured JSON prompt engineering.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border-t-4 border-blue-500 space-y-2">
+          <span class="text-xs font-black text-blue-400">SPRINT 4</span>
+          <h5 class="font-bold text-sm text-white">Backend Gateway</h5>
+          <p class="text-[11px] text-slate-300">Spring Boot 3 migration, secret API key isolation, CORS & MIME validation.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800 border-t-4 border-purple-500 space-y-2">
+          <span class="text-xs font-black text-purple-400">SPRINT 5</span>
+          <h5 class="font-bold text-sm text-white">QA & Hardening</h5>
+          <p class="text-[11px] text-slate-300">37 unit tests, multi-waste detection, exhibition demo resilience.</p>
+        </div>
+      </div>
+
+      <div class="p-3 bg-slate-800/80 rounded-xl text-center text-xs text-slate-300 border border-slate-700">
+        Agile Philosophy: Iterative weekly sprints producing working testable artifacts at each milestone.
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 13 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 14: QA & Testing -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Verification & Quality</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Testing & Quality Assurance Matrix</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="overflow-x-auto my-auto">
+        <table class="w-full text-left text-xs border border-slate-800 rounded-xl overflow-hidden">
+          <thead class="bg-emerald-950 text-emerald-300 font-bold uppercase">
+            <tr>
+              <th class="p-3">Test Type</th>
+              <th class="p-3">Component Tested</th>
+              <th class="p-3">Methodology</th>
+              <th class="p-3">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr class="bg-slate-800/40">
+              <td class="p-3 font-bold text-white">Backend Unit Testing</td>
+              <td class="p-3">ImageValidator, GeminiParser, DemoService</td>
+              <td class="p-3">JUnit 5, Mockito, Maven runner</td>
+              <td class="p-3 text-emerald-400 font-bold">✔ 37 / 37 Tests Passing</td>
+            </tr>
+            <tr class="bg-slate-800/20">
+              <td class="p-3 font-bold text-white">Image Validation</td>
+              <td class="p-3">Invalid MIME files, text notes, &gt;5MB files</td>
+              <td class="p-3">HTTP 400 Bad Request verification</td>
+              <td class="p-3 text-emerald-400 font-bold">✔ Validated & Rejected</td>
+            </tr>
+            <tr class="bg-slate-800/40">
+              <td class="p-3 font-bold text-white">End-to-End Integration</td>
+              <td class="p-3">React RTK Query ➔ Spring Boot ➔ Gemini</td>
+              <td class="p-3">Multipart upload & JSON payload check</td>
+              <td class="p-3 text-emerald-400 font-bold">✔ Response &lt; 2.0s</td>
+            </tr>
+            <tr class="bg-slate-800/20">
+              <td class="p-3 font-bold text-white">Exhibition Resilience</td>
+              <td class="p-3">Offline Demo Catalog fallback</td>
+              <td class="p-3">Simulated 502 error / Wi-Fi disconnect</td>
+              <td class="p-3 text-emerald-400 font-bold">✔ 100% Uptime Guaranteed</td>
+            </tr>
+            <tr class="bg-slate-800/40">
+              <td class="p-3 font-bold text-white">Responsive Viewport</td>
+              <td class="p-3">Camera viewfinder, cards, touch targets</td>
+              <td class="p-3">Chrome DevTools, mobile viewports</td>
+              <td class="p-3 text-emerald-400 font-bold">✔ Mobile & PC Tested</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 14 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 15: Challenges -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Engineering Solutions</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Challenges Faced & Solutions</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="space-y-3 my-auto">
+        <div class="p-3.5 rounded-xl bg-slate-800/70 border-l-4 border-rose-500 space-y-1">
+          <strong class="text-rose-400 text-xs uppercase tracking-wide">Challenge 1: API Key Security in Client Browser</strong>
+          <p class="text-xs text-slate-300">Calling Gemini directly from React exposed credentials in browser network dev tools. <strong>Solution:</strong> Moved all AI requests behind a secure Spring Boot gateway where credentials are kept strictly server-side.</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/70 border-l-4 border-amber-500 space-y-1">
+          <strong class="text-amber-400 text-xs uppercase tracking-wide">Challenge 2: Exhibition Connectivity & AI Rate Limits</strong>
+          <p class="text-xs text-slate-300">Unreliable college exhibition Wi-Fi risked live demonstration failures. <strong>Solution:</strong> Built an offline Demo Catalog (<code class="text-emerald-300">/api/demo</code>) with 9 pre-analyzed items guaranteeing zero downtime.</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/70 border-l-4 border-blue-500 space-y-1">
+          <strong class="text-blue-400 text-xs uppercase tracking-wide">Challenge 3: Spring 7 URI Template Colon Bug</strong>
+          <p class="text-xs text-slate-300">Spring WebClient automatically URL-encoded Google's <code class="text-emerald-300">:generateContent</code> endpoint into <code class="text-rose-400">%3A</code>, yielding 404s. <strong>Solution:</strong> Solved using <code class="text-amber-300">URI.create()</code> for exact RFC compliance.</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/70 border-l-4 border-purple-500 space-y-1">
+          <strong class="text-purple-400 text-xs uppercase tracking-wide">Challenge 4: Multi-Item Waste Discards</strong>
+          <p class="text-xs text-slate-300">Real photos contain multiple items (e.g., bottle + can + peel). <strong>Solution:</strong> Engineered a <code class="text-emerald-300">MultiWasteResult</code> schema with structured array parsing and an interactive batch selector.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 15 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 16: Sustainability & SDGs -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Environmental Impact</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Impact & Link to TechVista Theme</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+        <div class="p-6 rounded-2xl bg-amber-950/30 border border-amber-500/30 space-y-3">
+          <div class="p-2.5 rounded-xl bg-amber-500/20 text-amber-300 font-black text-sm text-center">SDG 11</div>
+          <h4 class="font-bold text-white text-sm text-center">Sustainable Cities</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>• Cleaner urban & campus surroundings</li>
+            <li>• Less littering in local municipal wards</li>
+            <li>• Fosters community recycling habits</li>
+            <li>• Streamlines municipal collection routes</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-emerald-950/30 border border-emerald-500/30 space-y-3">
+          <div class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-300 font-black text-sm text-center">SDG 12</div>
+          <h4 class="font-bold text-white text-sm text-center">Responsible Consumption</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>• Diverts recyclable plastics from landfill</li>
+            <li>• Prevents recycling stream contamination</li>
+            <li>• Promotes circular economy practices</li>
+            <li>• Plain-English waste reduction tips</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-blue-950/30 border border-blue-500/30 space-y-3">
+          <div class="p-2.5 rounded-xl bg-blue-500/20 text-blue-300 font-black text-sm text-center">SDG 13</div>
+          <h4 class="font-bold text-white text-sm text-center">Climate Action</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>• Reduces methane emissions from landfills</li>
+            <li>• Prevents toxic chemical leaching from batteries</li>
+            <li>• Saves energy required for virgin plastic</li>
+            <li>• Supports Swachh Bharat & Green WB Mission</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-3 bg-emerald-950/60 rounded-xl text-center text-xs text-emerald-300 font-bold border border-emerald-500/30">
+        From Ideas to Impact: Small daily actions, guided by accessible technology, create monumental change!
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 16 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 17: Future Roadmap -->
+    <section class="slide flex-col justify-between bg-slate-900 rounded-3xl p-8 sm:p-12 border border-slate-800 shadow-2xl max-w-6xl w-full h-[88vh]">
+      <div>
+        <span class="text-xs font-bold text-emerald-400 tracking-wider uppercase">Expansion Vision</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-white mt-1">Future Roadmap: IoT Smart Bins</h2>
+        <div class="w-16 h-1 bg-emerald-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-auto">
+        <div class="p-5 rounded-2xl bg-slate-800 border border-emerald-500/40 space-y-3">
+          <span class="text-xs font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Phase 1 (Completed)</span>
+          <h4 class="font-bold text-white text-sm">Full-Stack Vision AI Core</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>✔ React 19 + RTK Query frontend</li>
+            <li>✔ Spring Boot 3 secure gateway proxy</li>
+            <li>✔ Google Gemini Vision integration</li>
+            <li>✔ Multi-waste detection & offline demo</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800 border border-blue-500/40 space-y-3">
+          <span class="text-xs font-bold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300">Phase 2 (Next 6 Months)</span>
+          <h4 class="font-bold text-white text-sm">IoT Smart Bin Hardware</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>⏳ Raspberry Pi / ESP32 physical prototype</li>
+            <li>⏳ Servo-motor motorized lids opening automatically</li>
+            <li>⏳ Ultrasonic fill-level capacity alerts</li>
+            <li>⏳ On-device TensorFlow Lite model</li>
+          </ul>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-800 border border-purple-500/40 space-y-3">
+          <span class="text-xs font-bold px-2 py-0.5 rounded bg-purple-500/20 text-purple-300">Phase 3 (Long-Term)</span>
+          <h4 class="font-bold text-white text-sm">Municipal Ward Integration</h4>
+          <ul class="text-xs text-slate-300 space-y-2">
+            <li>⏳ Regional voice guidance in Bengali & Hindi</li>
+            <li>⏳ Municipal Corporation GIS analytics portal</li>
+            <li>⏳ Smart truck collection route planning</li>
+            <li>⏳ Civic coupons & utility bill rebate perks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-slate-500 border-t border-slate-800 pt-4">
+        <span>Slide 17 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 18: Thank You -->
+    <section class="slide flex-col justify-between bg-gradient-to-br from-[#064E3B] via-[#043527] to-[#022c22] rounded-3xl p-8 sm:p-12 border border-emerald-500/30 shadow-2xl max-w-6xl w-full h-[88vh] text-center">
+      <div></div>
+
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <h1 class="text-6xl sm:text-7xl font-black text-white">Thank You!</h1>
+        <p class="text-xl sm:text-2xl font-bold text-emerald-300">Small Steps, Big Change • Be a Sustainable Innovator</p>
+        
+        <div class="p-6 rounded-2xl bg-black/40 border border-emerald-500/30 text-left space-y-2 text-xs text-slate-200 backdrop-blur-md">
+          <strong class="text-amber-400 block font-bold text-sm">Project Summary & Impact:</strong>
+          <p>EcoScan demonstrates how modern web engineering coupled with Google Gemini Vision AI can eliminate waste segregation ambiguity, promote lifelong civic recycling habits through gamification, and build a sustainable green future for Siliguri Government Polytechnic and our broader community.</p>
+          <div class="pt-2 text-emerald-300 font-semibold text-center border-t border-white/10">
+            We cordially invite the respected Judges & Faculty to test our Live Camera Scanner at our project stall!
+          </div>
+        </div>
+
+        <div class="pt-2 text-xs text-slate-400 font-medium">
+          Dhruba Bachhar • Nabojeet Biswas • Subrata Roy<br>
+          Department of Computer Science and Technology • Siliguri Government Polytechnic • TechVista 2026
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-xs text-emerald-400/70 border-t border-emerald-500/20 pt-4">
+        <span>Slide 18 of 18</span>
+        <span>EcoScan • Siliguri Government Polytechnic</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation & Controls Bar -->
+  <footer class="controls w-full bg-slate-900 border-t border-slate-800 px-6 py-3 flex items-center justify-between z-50">
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-bold text-emerald-400">EcoScan AI</span>
+      <span class="text-xs text-slate-500">|</span>
+      <span id="slide-indicator" class="text-xs font-mono text-slate-300">Slide 1 / 18</span>
+    </div>
+
+    <!-- Centered Arrow Buttons -->
+    <div class="flex items-center gap-2">
+      <button onclick="prevSlide()" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition border border-slate-700">
+        ◀ Previous
+      </button>
+      <button onclick="nextSlide()" class="px-5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md">
+        Next ▶
+      </button>
+    </div>
+
+    <!-- Right Utility Buttons -->
+    <div class="flex items-center gap-2">
+      <button onclick="toggleFullscreen()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700">
+        ⛶ Fullscreen
+      </button>
+      <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold border border-slate-700">
+        🖨 Print / PDF
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const indicator = document.getElementById('slide-indicator');
+
+    function showSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      currentSlide = index;
+
+      slides.forEach((s, idx) => {
+        if (idx === currentSlide) {
+          s.classList.add('active');
+        } else {
+          s.classList.remove('active');
+        }
+      });
+
+      indicator.textContent = `Slide ${currentSlide + 1} / ${slides.length}`;
+    }
+
+    function prevSlide() { showSlide(currentSlide - 1); }
+    function nextSlide() { showSlide(currentSlide + 1); }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      } else if (e.key === 'f' || e.key === 'F') {
+        toggleFullscreen();
+      } else if (e.key === 'Home') {
+        showSlide(0);
+      } else if (e.key === 'End') {
+        showSlide(slides.length - 1);
+      }
+    });
+  </script>
+</body>
+</html>
