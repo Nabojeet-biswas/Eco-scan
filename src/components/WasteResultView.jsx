@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { BIN_CONFIG } from "../features/waste/constants";
+import { resolveWasteImage } from "../utils/imageUtils";
 import {
   Sparkles,
   Camera,
@@ -28,6 +29,7 @@ export default function WasteResultView({
 }) {
   const [toastMessage, setToastMessage] = useState(null);
   const [showEcoDetails, setShowEcoDetails] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   const showToast = (msg) => {
     setToastMessage(msg);
@@ -90,13 +92,7 @@ export default function WasteResultView({
   const binMeta = BIN_CONFIG[binKey] || BIN_CONFIG["non-recyclable"];
   const BinIcon = binMeta.icon;
 
-  const itemPhoto =
-    userImage ||
-    result.image ||
-    (result.id ? `/images/items/${result.id}.jpg` : null) ||
-    (result.itemName
-      ? `/images/items/${result.itemName.toLowerCase().replace(/\s+/g, "-")}.jpg`
-      : null);
+  const itemPhoto = resolveWasteImage(result, userImage);
 
   const binBgTheme = {
     recyclable: {
@@ -221,14 +217,18 @@ export default function WasteResultView({
         {/* Item & Bin Header Banner */}
         <div className="p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-700/60">
           <div className="flex items-center gap-4">
-            {itemPhoto && (
+            {itemPhoto && !imgError ? (
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden shrink-0 border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-700 shadow-2xs">
                 <img
                   src={itemPhoto}
                   alt={result.itemName}
                   className="w-full h-full object-cover"
-                  onError={(e) => { e.currentTarget.style.display = "none"; }}
+                  onError={() => setImgError(true)}
                 />
+              </div>
+            ) : (
+              <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center shrink-0 shadow-2xs border border-slate-200 dark:border-slate-700 ${binMeta.badgeColor}`}>
+                <BinIcon className="w-8 h-8 sm:w-10 sm:h-10" />
               </div>
             )}
             <div>
@@ -278,7 +278,7 @@ export default function WasteResultView({
           <div className="p-5 sm:p-6 space-y-3">
             <h3 className="text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-500" />
-              <span>How to Prepare Before Tossing</span>
+              <span>What to do before throwing it away</span>
             </h3>
 
             <div className="grid grid-cols-1 gap-2">
@@ -306,7 +306,7 @@ export default function WasteResultView({
           {result.decompositionTime && (
             <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 border border-slate-200/70 dark:border-slate-700">
               <span className="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">
-                Decomposition
+                Breaks down in
               </span>
               <span className="font-black text-slate-900 dark:text-white text-sm">
                 {result.decompositionTime}
@@ -317,7 +317,7 @@ export default function WasteResultView({
           {result.recyclability && (
             <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-700/40 border border-slate-200/70 dark:border-slate-700">
               <span className="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">
-                Recyclability
+                Can it be recycled?
               </span>
               <span className="font-black text-slate-900 dark:text-white text-sm capitalize">
                 {result.recyclability}
@@ -389,7 +389,7 @@ export default function WasteResultView({
           to="/bins"
           className="text-slate-500 hover:text-emerald-600 transition flex items-center gap-1 font-medium"
         >
-          <span>Need bin color guide?</span>
+          <span>View all 4 bin colors</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
         <Link

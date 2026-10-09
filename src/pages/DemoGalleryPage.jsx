@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import { DEMO_ITEMS } from "../data/demoData";
 import { useGetDemoListQuery } from "../app/services/ecoScanApi";
+import { resolveWasteImage } from "../utils/imageUtils";
 import {
   Layers,
   Sparkles,
@@ -88,12 +89,17 @@ export default function DemoGalleryPage() {
               to={`/demo/${item.id}`}
               className="bg-white dark:bg-slate-800 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-700 shadow-xs hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-lg hover:-translate-y-1 transition-all group flex flex-col justify-between"
             >
-              <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-700 mb-4 shadow-xs">
+              <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-700 mb-4 shadow-xs flex items-center justify-center">
                 <img
-                  src={item.image || `/images/items/${item.id}.jpg`}
+                  src={resolveWasteImage(item) || `/images/items/${item.id}.jpg`}
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
+                  }}
                 />
+                <span className="hidden text-5xl">{item.icon || "📦"}</span>
                 <span className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-slate-900/80 text-white backdrop-blur-md shadow-sm">
                   {item.category || "Waste"}
                 </span>

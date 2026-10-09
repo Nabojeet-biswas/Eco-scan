@@ -28,7 +28,7 @@ export default function FaqPage() {
           Frequently Asked Questions
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Everything you need to know about EcoScan's AI vision, bin guidelines, image security, and supported formats.
+          Everything you need to know about how EcoScan works, bin colors, photo privacy, and accuracy.
         </p>
       </div>
 
@@ -70,7 +70,7 @@ export default function FaqPage() {
           Have a question not answered here?
         </h3>
         <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm mx-auto">
-          We are constantly refining our material taxonomy. Send us your feedback or report an item classification.
+          We are always improving our sorting recommendations. Send us your feedback or suggestions anytime.
         </p>
         <Link
           to="/contact"

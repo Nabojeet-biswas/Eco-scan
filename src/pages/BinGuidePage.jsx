@@ -27,13 +27,13 @@ export default function BinGuidePage() {
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
           <Recycle className="w-3.5 h-3.5" />
-          <span>Universal Municipal Guidelines</span>
+          <span>Simple Bin Guide for Everyone</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">
           The 4 Bins Guide
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Sorting correctly prevents recycling truckloads from being rejected and sent to landfills. Here is exactly what belongs in each color-coded stream.
+          Sorting properly stops whole truckloads of recycling from being sent to trash dumps. Here is what belongs in each colored bin.
         </p>
       </div>
 
@@ -133,7 +133,7 @@ export default function BinGuidePage() {
               <div className="p-6 sm:p-8 bg-amber-50/60 dark:bg-amber-950/20 border-t border-amber-100 dark:border-amber-900/40">
                 <h4 className="font-bold text-xs uppercase tracking-wider text-amber-900 dark:text-amber-300 flex items-center gap-2 mb-3">
                   <AlertOctagon className="w-4 h-4 text-amber-600" />
-                  <span>Frequent Mistakes for this Bin</span>
+                  <span>Common Mistakes to Avoid</span>
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {bin.commonMistakes.map((mistake, idx) => (

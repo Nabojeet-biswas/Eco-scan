@@ -13,6 +13,7 @@ import {
   useLazyGetDemoResultQuery,
   useLazyGetMultiDemoQuery,
 } from "../../app/services/ecoScanApi";
+import { resolveWasteImage } from "../../utils/imageUtils";
 import {
   Recycle,
   Sprout,
@@ -57,7 +58,7 @@ const BINS = [
     key: "non-recyclable",
     title: "Non-Recyclable",
     subtitle: "Red / Gray Bin",
-    examples: "Plastic wraps, chip bags, soiled items, landfill",
+    examples: "Plastic wrappers, snack bags, dirty napkins, regular trash",
     icon: Trash2,
     bgGradient: "from-rose-600 to-red-700",
     hoverBorder: "hover:border-rose-400 hover:ring-4 hover:ring-rose-100",
@@ -67,7 +68,7 @@ const BINS = [
     key: "special",
     title: "Special Disposal",
     subtitle: "Amber / Hazard Bin",
-    examples: "Batteries, e-waste, chemicals, lightbulbs",
+    examples: "Batteries, old electronics, paint, bulbs",
     icon: AlertTriangle,
     bgGradient: "from-amber-500 to-orange-700",
     hoverBorder: "hover:border-amber-400 hover:ring-4 hover:ring-amber-100",
@@ -251,20 +252,17 @@ export default function SortingGame() {
                     >
                       {item.isCorrect ? <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <X className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
                     </div>
-                    <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 border border-white/20 bg-slate-800">
+                    <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 border border-white/20 bg-slate-800 flex items-center justify-center">
                       <img
-                        src={
-                          item.image ||
-                          (item.id ? `/images/items/${item.id}.jpg` : null) ||
-                          (item.itemName ? `/images/items/${item.itemName.toLowerCase().replace(/\s+/g, "-")}.jpg` : null) ||
-                          "/images/items/plastic-bottle.jpg"
-                        }
+                        src={resolveWasteImage(item) || "/images/items/plastic-bottle.jpg"}
                         alt={item.itemName}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
+                          if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
                         }}
                       />
+                      <span className="hidden text-sm">📦</span>
                     </div>
                     <div>
                       <p className="font-bold text-xs sm:text-sm text-white">
@@ -360,22 +358,17 @@ export default function SortingGame() {
           </div>
 
           {/* Real Photo of Item */}
-          <div className="w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 bg-slate-100 relative group">
+          <div className="w-28 h-28 sm:w-36 sm:h-36 mx-auto rounded-2xl overflow-hidden shadow-md border-2 border-slate-200 bg-slate-100 relative group flex items-center justify-center">
             <img
-              src={
-                activeItem.image ||
-                (activeItem.id ? `/images/items/${activeItem.id}.jpg` : null) ||
-                (activeItem.itemName
-                  ? `/images/items/${activeItem.itemName.toLowerCase().replace(/\s+/g, "-")}.jpg`
-                  : null) ||
-                "/images/items/plastic-bottle.jpg"
-              }
+              src={resolveWasteImage(activeItem) || "/images/items/plastic-bottle.jpg"}
               alt={activeItem.itemName || activeItem.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
+                if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
               }}
             />
+            <span className="hidden text-4xl sm:text-5xl">📦</span>
           </div>
 
           <div className="max-w-md mx-auto">
@@ -509,22 +502,17 @@ export default function SortingGame() {
                   <XCircle className="w-6 h-6 sm:w-7 sm:h-7" />
                 )}
               </div>
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 border border-slate-200 bg-white shadow-2xs">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shrink-0 border border-slate-200 bg-white shadow-2xs flex items-center justify-center">
                 <img
-                  src={
-                    lastSortResult.image ||
-                    (lastSortResult.id ? `/images/items/${lastSortResult.id}.jpg` : null) ||
-                    (lastSortResult.itemName
-                      ? `/images/items/${lastSortResult.itemName.toLowerCase().replace(/\s+/g, "-")}.jpg`
-                      : null) ||
-                    "/images/items/plastic-bottle.jpg"
-                  }
+                  src={resolveWasteImage(lastSortResult) || "/images/items/plastic-bottle.jpg"}
                   alt={lastSortResult.itemName}
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
+                    if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
                   }}
                 />
+                <span className="hidden text-lg">📦</span>
               </div>
               <div>
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">

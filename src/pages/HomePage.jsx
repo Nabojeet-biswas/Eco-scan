@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import { DEMO_ITEMS } from "../data/demoData";
 import { useGetStatusQuery } from "../app/services/ecoScanApi";
+import { resolveWasteImage } from "../utils/imageUtils";
 import {
   Camera,
   Sparkles,
@@ -38,7 +39,7 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-300 dark:border-emerald-700 text-xs font-bold text-emerald-800 dark:text-emerald-300 shadow-2xs">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
             <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>AI-Powered Waste Classification &amp; Circular Guidance</span>
+            <span>Smart AI Waste Scanner &amp; Easy Recycling Guide</span>
           </div>
 
           {/* Headline */}
@@ -51,7 +52,7 @@ export default function HomePage() {
 
           {/* Subheadline */}
           <p className="text-base sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            Point your camera at any waste item. Our Google Gemini Vision AI instantly identifies materials, detects multi-item trash, and tells you exactly which bin to use.
+            Point your camera at any waste item. Our smart AI instantly recognizes what it is, can detect multiple items at once, and tells you the exact bin to use.
           </p>
 
           {/* Action Buttons */}
@@ -77,7 +78,7 @@ export default function HomePage() {
           {/* Feature Badges */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-6 text-xs text-slate-500 dark:text-slate-400 font-medium">
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Instant Gemini Vision
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Fast Smart Vision
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 4 Color-Coded Bins
@@ -86,7 +87,7 @@ export default function HomePage() {
               <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Multi-Item Support
             </span>
             <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Zero Photo Retention
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" /> We Never Save Photos
             </span>
           </div>
 
@@ -101,8 +102,8 @@ export default function HomePage() {
               <div className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:left-6 sm:right-6 bg-slate-900/85 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-white/10 flex items-center justify-between text-white text-xs">
                 <div className="flex items-center gap-2.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-bold">Real-time AI Material Detection</span>
-                  <span className="hidden sm:inline text-slate-400">• PET Plastic, Recyclability: High (98%)</span>
+                  <span className="font-bold">Live AI Waste Detection</span>
+                  <span className="hidden sm:inline text-slate-400">• Plastic Bottle, Recyclable: 98% Yes</span>
                 </div>
                 <Link
                   to="/scan"
@@ -127,7 +128,7 @@ export default function HomePage() {
             How EcoScan Works
           </h2>
           <p className="text-sm text-slate-600 dark:text-slate-400">
-            Three simple steps to transform confusion into sustainable action.
+            Three easy steps to sort your trash correctly every time.
           </p>
         </div>
 
@@ -142,7 +143,7 @@ export default function HomePage() {
               <span>Snap or Upload Photo</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Take a quick photo of your trash using your phone camera or upload any JPEG/PNG/WebP image.
+              Take a quick photo of your trash or choose a picture from your device.
             </p>
           </div>
 
@@ -156,7 +157,7 @@ export default function HomePage() {
               <span>AI Identifies Materials</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Google Gemini Vision analyzes the spatial cues, polymers, and materials, isolating single or multiple waste items.
+              Our smart AI spots what the item is made of, and can even find multiple items in one photo.
             </p>
           </div>
 
@@ -167,10 +168,10 @@ export default function HomePage() {
             </div>
             <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <Recycle className="w-5 h-5 text-amber-500" />
-              <span>Dispose in Right Bin</span>
+              <span>Put It in the Right Bin</span>
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-              Receive instant color-coded bin guidance (Green, Brown, Gray, Purple) plus prep steps and circular reuse tips.
+              Get the right bin color (Green, Brown, Gray, Purple) along with easy cleaning steps and reuse ideas.
             </p>
           </div>
         </div>
@@ -207,12 +208,17 @@ export default function HomePage() {
               to={`/demo/${item.id}`}
               className="bg-white dark:bg-slate-800 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-2xs hover:border-emerald-400 dark:hover:border-emerald-500 hover:shadow-sm hover:-translate-y-1 transition-all group flex flex-col items-center text-center justify-between"
             >
-              <div className="w-full h-28 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 mb-2.5 shadow-2xs">
+              <div className="w-full h-28 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-700 mb-2.5 shadow-2xs flex items-center justify-center">
                 <img
-                  src={item.image || `/images/items/${item.id}.jpg`}
+                  src={resolveWasteImage(item) || `/images/items/${item.id}.jpg`}
                   alt={item.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
+                  }}
                 />
+                <span className="hidden text-3xl">{item.icon || "📦"}</span>
               </div>
               <div>
                 <h4 className="font-bold text-sm text-slate-900 dark:text-white">{item.name}</h4>
@@ -239,7 +245,7 @@ export default function HomePage() {
             Scanned multiple items in one photo?
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            See how EcoScan isolates a Plastic Water Bottle, Aluminum Soda Can, and Banana Peel simultaneously from a single picnic image.
+            See how EcoScan spots a plastic bottle, soda can, and banana peel all at the same time in one picture.
           </p>
 
           <div>
@@ -270,15 +276,15 @@ export default function HomePage() {
         </div>
         <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 text-center">
           <p className="text-2xl sm:text-3xl font-black text-teal-500">450 yrs</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Decomposition time of plastic bottles</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Time plastic bottles take to break down</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 text-center">
           <p className="text-2xl sm:text-3xl font-black text-amber-500">28x</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Methane potency from food in landfills</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Extra warming power of food rotted in dumps</p>
         </div>
         <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 text-center">
           <p className="text-2xl sm:text-3xl font-black text-purple-500">100%</p>
-          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Glass infinitely recyclable</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Glass can be recycled again and again</p>
         </div>
       </section>
     </div>

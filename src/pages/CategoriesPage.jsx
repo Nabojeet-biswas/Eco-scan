@@ -18,106 +18,106 @@ export default function CategoriesPage() {
 
   const categoriesDetail = {
     plastic: {
-      title: "Plastics & Polymers",
+      title: "Plastics",
       image: "/images/items/plastic-bottle.jpg",
       icon: "🥤",
       resinCodes: [
-        { code: "#1 PET", name: "Polyethylene Terephthalate", accepted: "Widely Recycled", examples: "Water bottles, soda bottles, salad dressing jugs" },
-        { code: "#2 HDPE", name: "High-Density Polyethylene", accepted: "Widely Recycled", examples: "Milk jugs, shampoo bottles, detergent bottles" },
-        { code: "#3 PVC", name: "Polyvinyl Chloride", accepted: "Rarely Recycled", examples: "Pipes, shower curtains, medical tubing" },
-        { code: "#4 LDPE", name: "Low-Density Polyethylene", accepted: "Grocery Drop-off Only", examples: "Squeeze bottles, grocery bags, bread bags" },
-        { code: "#5 PP", name: "Polypropylene", accepted: "Frequently Recycled", examples: "Yogurt cups, medicine bottles, bottle caps" },
-        { code: "#6 PS", name: "Polystyrene (Styrofoam)", accepted: "Landfill Only", examples: "Foam takeout clamshells, disposable cups, packing peanuts" },
-        { code: "#7 Other", name: "Polycarbonate / Multi-Layer", accepted: "Landfill Only", examples: "Multi-resin chips bags, baby bottles, optical discs" }
+        { code: "#1 PET", name: "Drink Bottles (Clear Plastic)", accepted: "Widely Recycled", examples: "Water bottles, soda bottles, salad dressing jugs" },
+        { code: "#2 HDPE", name: "Heavy Jugs (Thick Plastic)", accepted: "Widely Recycled", examples: "Milk jugs, shampoo bottles, detergent bottles" },
+        { code: "#3 PVC", name: "Pipes & Tubes (Hard Plastic)", accepted: "Rarely Recycled", examples: "Pipes, shower curtains, medical tubing" },
+        { code: "#4 LDPE", name: "Plastic Wrap & Soft Bags", accepted: "Store Drop-off Only", examples: "Squeeze bottles, grocery bags, bread bags" },
+        { code: "#5 PP", name: "Hard Tubs & Containers", accepted: "Frequently Recycled", examples: "Yogurt cups, medicine bottles, bottle caps" },
+        { code: "#6 PS", name: "Styrofoam & Foam Cups", accepted: "Regular Trash Only", examples: "Takeout foam containers, disposable cups" },
+        { code: "#7 Other", name: "Mixed Plastics", accepted: "Regular Trash Only", examples: "Chip bags, snack pouches, baby bottles" }
       ],
       rules: [
-        "Empty liquid contents completely before recycling.",
-        "Keep plastic screw-on caps securely attached to bottles.",
-        "Never place thin plastic grocery bags or plastic film in curbside bins.",
-        "Avoid dark/black plastics as automated optical sorters cannot detect carbon black pigment."
+        "Pour out all liquids completely before tossing.",
+        "Screw plastic bottle caps back on tightly.",
+        "Never put soft plastic grocery bags in home recycling bins.",
+        "Avoid black plastic when possible; sorting sensors have trouble seeing dark colors."
       ],
-      lifecycle: "PET and HDPE are shredded into flakes, washed, melted into clean pellets, and re-spun into fleece fabric, carpeting, or new food-grade bottles."
+      lifecycle: "Plastics are chopped into tiny flakes, washed, melted down, and turned into new bottles, warm jackets, or carpet fibers."
     },
     metal: {
-      title: "Metals & Alloys",
+      title: "Metals",
       image: "/images/items/aluminum-can.jpg",
       icon: "🥫",
       resinCodes: [
-        { code: "Aluminum", name: "Beverage & Foil Alloy", accepted: "100% Recyclable", examples: "Soda cans, beer cans, clean pie pans" },
-        { code: "Steel / Tin", name: "Ferrous Canned Goods", accepted: "100% Recyclable", examples: "Soup cans, vegetable tins, coffee cans" },
-        { code: "Copper / Brass", name: "Non-Ferrous Scrap", accepted: "Scrap Metal Depots", examples: "Plumbing pipes, electrical wiring" }
+        { code: "Aluminum", name: "Drink Cans & Clean Foil", accepted: "100% Recyclable", examples: "Soda cans, sparkling water cans, clean pie pans" },
+        { code: "Steel / Tin", name: "Food & Soup Cans", accepted: "100% Recyclable", examples: "Soup cans, canned beans, pet food cans" },
+        { code: "Copper / Brass", name: "Wires & Pipes", accepted: "Scrap Metal Centers", examples: "Old pipes, charging cords, electrical wiring" }
       ],
       rules: [
-        "Do not crush aluminum cans completely flat; optical sorters may confuse them with paper sheets.",
-        "Ensure aerosol spray cans are completely depleted before recycling.",
-        "Scrape food chunks from soup tins, but no need to remove paper labels."
+        "Do not smash cans completely flat; sorting cameras might mistake a flat disc for paper!",
+        "Make sure spray cans are completely empty before recycling.",
+        "Rinse food chunks from food cans; you can leave paper labels on."
       ],
-      lifecycle: "Aluminum and steel are melted down in electric arc furnaces and rolled into sheet coils with zero degradation in metal quality — forever."
+      lifecycle: "Aluminum and steel are melted down and made into new cans again and again without losing any strength."
     },
     paper: {
       title: "Paper & Cardboard",
       image: "/images/items/cardboard.jpg",
       icon: "📦",
       resinCodes: [
-        { code: "Corrugated", name: "Fluted Shipping Cardboard", accepted: "Highest Value", examples: "Amazon shipping boxes, appliance boxes" },
-        { code: "Paperboard", name: "Single-Layer Chipboard", accepted: "Widely Recycled", examples: "Cereal boxes, tissue boxes, shoe boxes" },
-        { code: "Office Paper", name: "Bleached High-Grade White", accepted: "Widely Recycled", examples: "Printer paper, envelopes, documents" },
-        { code: "Mixed Paper", name: "Newsprint & Glossy", accepted: "Widely Recycled", examples: "Magazines, brochures, flyers" }
+        { code: "Cardboard", name: "Brown Shipping Boxes", accepted: "Highest Value", examples: "Delivery boxes, moving boxes" },
+        { code: "Paperboard", name: "Food Boxes & Cartons", accepted: "Widely Recycled", examples: "Cereal boxes, tissue boxes, shoe boxes" },
+        { code: "White Paper", name: "Office & School Sheets", accepted: "Widely Recycled", examples: "Printer paper, envelopes, notebooks" },
+        { code: "Newsprint", name: "Newspapers & Magazines", accepted: "Widely Recycled", examples: "Magazines, flyers, comics" }
       ],
       rules: [
-        "Cardboard and paper must remain clean and completely dry.",
-        "Flatten all corrugated boxes to conserve bin volume.",
-        "Greasy pizza boxes with cheese grease belong in organic compost or regular trash, NOT clean paper bins."
+        "Keep all cardboard and paper dry and clean.",
+        "Flatten all shipping boxes so they take up less space.",
+        "Greasy pizza boxes belong in the food compost bin or regular trash, not the clean paper bin."
       ],
-      lifecycle: "Paper is churned with warm water into pulp, screened for inks and adhesives, and pressed into new cardboard or tissue products up to 7 times."
+      lifecycle: "Paper is mixed with warm water, cleaned of ink, and pressed into new cardboard or tissues up to 7 times."
     },
     glass: {
-      title: "Glass Containers",
+      title: "Glass",
       image: "/images/items/glass-bottle.jpg",
       icon: "🍾",
       resinCodes: [
-        { code: "Flint Glass", name: "Clear Container Glass", accepted: "100% Recyclable", examples: "Pickle jars, water bottles, baby food jars" },
-        { code: "Amber Glass", name: "Brown Beverage Glass", accepted: "100% Recyclable", examples: "Beer bottles, pharmaceutical bottles" },
-        { code: "Emerald Glass", name: "Green Beverage Glass", accepted: "100% Recyclable", examples: "Wine bottles, olive oil bottles" }
+        { code: "Clear Glass", name: "Jars & Bottles", accepted: "100% Recyclable", examples: "Pickle jars, water bottles, jam jars" },
+        { code: "Brown Glass", name: "Drink Bottles", accepted: "100% Recyclable", examples: "Beer bottles, medicine bottles" },
+        { code: "Green Glass", name: "Green Bottles", accepted: "100% Recyclable", examples: "Wine bottles, olive oil bottles" }
       ],
       rules: [
-        "Rinse out food remains; paper labels do not need to be scraped off.",
-        "Remove metal lids and plastic corks.",
-        "Never place window panes, Pyrex ovenware, drinking tumblers, or ceramics in the glass recycling bin."
+        "Rinse out food scraps; labels can stay on.",
+        "Take off metal caps and corks.",
+        "Never put lightbulbs, window glass, mirrors, or ceramic coffee mugs in the glass bin."
       ],
-      lifecycle: "Crushed cullet glass is mixed with sand and melted in kilns at lower temperatures than raw materials, saving massive energy emissions."
+      lifecycle: "Used glass is crushed, melted down easily, and poured into new jars and bottles with almost zero waste."
     },
     organic: {
-      title: "Organics & Food Scraps",
+      title: "Food & Organics",
       image: "/images/items/banana-peel.jpg",
       icon: "🍌",
       resinCodes: [
-        { code: "Green Waste", name: "Nitrogen-Rich Kitchen Scraps", accepted: "Compost Bin", examples: "Fruit peels, vegetable trimmings, coffee grounds" },
-        { code: "Brown Waste", name: "Carbon-Rich Plant Matter", accepted: "Compost Bin", examples: "Dry leaves, twigs, plain shredded cardboard" },
-        { code: "Food Soiled", name: "Unbleached Paper Products", accepted: "Compost Bin", examples: "Napkins, greasy unlined paper plates" }
+        { code: "Food Scraps", name: "Kitchen Leftovers", accepted: "Compost Bin", examples: "Fruit peels, vegetable ends, coffee grounds" },
+        { code: "Yard Waste", name: "Garden Trimmings", accepted: "Compost Bin", examples: "Dry leaves, twigs, grass clippings" },
+        { code: "Soiled Paper", name: "Uncoated Paper", accepted: "Compost Bin", examples: "Paper napkins, greasy unlined paper plates" }
       ],
       rules: [
         "Peel off tiny plastic stickers on fruits and vegetables.",
-        "Do not wrap scraps in standard plastic bags.",
-        "Keep pet waste and cat litter out of municipal food compost streams."
+        "Do not toss food in plastic bags unless certified compostable.",
+        "Keep dog and cat waste out of food compost bins."
       ],
-      lifecycle: "Microorganisms break down organic matter in 60-90 days, producing nutrient-rich humus compost that rejuvenates farm topsoils and sequesters carbon."
+      lifecycle: "Natural microbes break down food scraps in 2 to 3 months, turning them into rich fertilizer that helps plants grow."
     },
     ewaste: {
-      title: "E-Waste & Dangerous Items",
+      title: "Electronics & Batteries",
       image: "/images/items/battery.jpg",
       icon: "🔋",
       resinCodes: [
-        { code: "Lithium-Ion", name: "Rechargeable Batteries", accepted: "Special Drop-Off Only", examples: "Phones, vape pens, laptops, power tools" },
-        { code: "Alkaline", name: "Single-Use Cylindrical", accepted: "Battery Recycling Kiosk", examples: "AA, AAA, 9V batteries" },
-        { code: "Consumer Electronics", name: "Circuit Boards & Monitors", accepted: "E-Waste Depot", examples: "Old laptops, tablets, chargers, cords" }
+        { code: "Rechargeable", name: "Phone & Tool Batteries", accepted: "Special Drop-Off", examples: "Phones, vape pens, laptops, power tools" },
+        { code: "Single-Use", name: "Everyday Batteries", accepted: "Battery Drop-Off", examples: "AA, AAA, 9V batteries" },
+        { code: "Electronics", name: "Old Gadgets & Cords", accepted: "Electronics Drop-Off", examples: "Old laptops, phones, cables, chargers" }
       ],
       rules: [
-        "DANGER: Never place lithium batteries in household garbage or curbside bins.",
-        "Cover battery terminals with electrical or clear tape to prevent short circuits.",
-        "Take gadgets to electronics retailers or municipal drop-off days."
+        "WARNING: Never put batteries in regular trash cans; they can cause fires.",
+        "Tape the ends of batteries with clear tape before dropping them off.",
+        "Bring old gadgets to local electronic drop-off centers or store bins."
       ],
-      lifecycle: "Specialized shredding and pyrometallurgical facilities recover high-purity lithium, cobalt, nickel, and copper to manufacture new vehicle batteries."
+      lifecycle: "Specialized recycling centers safely take apart batteries to recover valuable metals like lithium and copper for new devices."
     }
   };
 
@@ -129,13 +129,13 @@ export default function CategoriesPage() {
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Material Encyclopedia</span>
+          <span>Waste Guide</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">
           Waste Categories
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Explore the composition, resin classifications, preparation checklists, and circular lifecycles of everyday waste materials.
+          Learn what everyday items are made of, how to prepare them, and what happens when they get recycled.
         </p>
       </div>
 
@@ -151,11 +151,7 @@ export default function CategoriesPage() {
                 : "bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-emerald-300"
             }`}
           >
-            <img
-              src={cat.image}
-              alt={cat.title}
-              className="w-5 h-5 rounded-md object-cover shrink-0 shadow-2xs"
-            />
+            <span className="text-base leading-none shrink-0">{cat.icon}</span>
             <span>{cat.title}</span>
           </button>
         ))}
@@ -164,12 +160,17 @@ export default function CategoriesPage() {
       {/* Selected Category Deep Dive Panel */}
       <div className="bg-white dark:bg-slate-800 rounded-3xl p-6 sm:p-10 border border-slate-200 dark:border-slate-700 shadow-sm space-y-8 animate-in fade-in">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-md">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-700 shrink-0 shadow-md flex items-center justify-center">
             <img
               src={activeCategory.image}
               alt={activeCategory.title}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+                if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = "block";
+              }}
             />
+            <span className="hidden text-3xl sm:text-4xl">{activeCategory.icon}</span>
           </div>
           <div>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">

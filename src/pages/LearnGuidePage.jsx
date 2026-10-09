@@ -20,13 +20,13 @@ export default function LearnGuidePage() {
       <div className="text-center space-y-3 max-w-2xl mx-auto">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider">
           <BookOpen className="w-3.5 h-3.5" />
-          <span>Waste Education Center</span>
+          <span>Recycling Guide</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">
           Recycling &amp; Disposal Guide
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Understanding what happens after you dispose of trash is the first step toward a circular economy. Learn the rules, avoid common mistakes, and divert waste from landfills.
+          Understanding where trash goes helps everyone recycle better. Learn the rules, avoid common mistakes, and keep clean materials out of dumps.
         </p>
       </div>
 
@@ -44,7 +44,7 @@ export default function LearnGuidePage() {
               The 4 Bins System
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Color-coded rules for Recyclable, Organic, Landfill, and Special hazardous bins.
+              Color-coded rules for Recyclables, Food scraps, Regular trash, and Special items.
             </p>
           </div>
           <div className="mt-4 flex items-center text-xs font-bold text-emerald-600 dark:text-emerald-400 gap-1 group-hover:translate-x-1 transition-transform">
@@ -65,7 +65,7 @@ export default function LearnGuidePage() {
               Waste Categories
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Detailed breakdown of Plastics (#1-#7), Metals, Paper, Glass, and Organics.
+              Clear guide to Plastics, Metals, Paper, Glass, and Food scraps.
             </p>
           </div>
           <div className="mt-4 flex items-center text-xs font-bold text-teal-600 dark:text-teal-400 gap-1 group-hover:translate-x-1 transition-transform">
@@ -86,7 +86,7 @@ export default function LearnGuidePage() {
               Tips &amp; Best Practices
             </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Quick hacks, how to avoid wishcycling, rinsing rules, and creative upcycling.
+              Quick tips, rinsing rules, mistakes to avoid, and creative reuse ideas.
             </p>
           </div>
           <div className="mt-4 flex items-center text-xs font-bold text-amber-600 dark:text-amber-400 gap-1 group-hover:translate-x-1 transition-transform">
@@ -101,10 +101,10 @@ export default function LearnGuidePage() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
           <div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white">
-              Major Waste Streams Overview
+              Waste Types at a Glance
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Click any category card for full handling and decomposition details.
+              Click any card to see how to recycle it and how long it takes to break down.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function LearnGuidePage() {
             to="/categories"
             className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1"
           >
-            <span>Complete Category Directory</span>
+            <span>View All Categories</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>

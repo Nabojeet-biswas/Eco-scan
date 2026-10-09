@@ -16,43 +16,43 @@ export default function HowItWorksPage() {
   const steps = [
     {
       step: 1,
-      title: "Image Capture & Normalization",
-      subtitle: "Client-side processing & compression",
+      title: "Take or Choose a Photo",
+      subtitle: "Quick & simple on your device",
       icon: Camera,
       color: "from-blue-500 to-cyan-500",
       description:
-        "When you snap a photo or upload an image, EcoScan automatically normalizes EXIF orientation, validates the file format (JPEG, PNG, WebP), and ensures the payload conforms to our 5MB high-speed transmission standard.",
-      techNote: "Canvas-based client preview & instant memory serialization"
+        "Take a quick photo of your trash or pick an image from your phone or computer. EcoScan prepares the photo instantly so it's ready to scan.",
+      techNote: "Fast preview on your device • Under 5MB"
     },
     {
       step: 2,
-      title: "Spring Boot Microservice Ingestion",
-      subtitle: "Secure multipart streaming & validation",
+      title: "Safe & Private Server Check",
+      subtitle: "Processed in memory — never saved to disk",
       icon: Server,
       color: "from-teal-500 to-emerald-500",
       description:
-        "Your image is safely sent via multipart/form-data to our Spring Boot backend. The server checks content types, filters malicious binaries, and buffers the photo ephemerally in RAM — never saving photos to persistent hard drives.",
-      techNote: "Zero photo retention • Ephemeral byte-stream processing"
+        "Your photo is sent safely to our backend server. We check that the image is valid and process it in temporary memory. We never store or save your photos.",
+      techNote: "100% Private • We never keep your photos"
     },
     {
       step: 3,
-      title: "Google Gemini 2.0 AI Vision Inference",
-      subtitle: "Multi-modal spatial reasoning & segmentation",
+      title: "Smart AI Vision",
+      subtitle: "Identifies items and materials in seconds",
       icon: Sparkles,
       color: "from-emerald-500 to-teal-600",
       description:
-        "The image bytes are fed to Google's state-of-the-art Gemini 2.0 multi-modal AI. The model identifies visual material cues (transparency of PET, reflective glints of aluminum, organic textures of peels) and isolates multiple distinct items in a single shot.",
-      techNote: "Multi-waste object segmentation & polymer recognition"
+        "Google Gemini AI inspects the photo. It checks what the items are made of (such as plastic, aluminum, paper, or food) and can even spot several different items in one photo.",
+      techNote: "Spots multiple waste items in one photo"
     },
     {
       step: 4,
-      title: "Universal Bin Mapping & Guidance",
-      subtitle: "Actionable municipal circular economy directives",
+      title: "Find the Right Bin",
+      subtitle: "Clear bin colors, cleaning steps, and reuse ideas",
       icon: Recycle,
       color: "from-amber-500 to-emerald-600",
       description:
-        "The identified waste polymers are cross-referenced with municipal recycling taxonomies. You receive an unambiguous color-coded bin (Green, Brown, Gray, Purple), preparation instructions, decomposition timelines, and reuse ideas.",
-      techNote: "Color-coded bin classification + circular lifecycle enrichment"
+        "EcoScan matches the items with standard recycling rules. You get the exact bin color (Green, Brown, Gray, Purple), simple cleaning tips, how long it takes to break down, and creative reuse ideas.",
+      techNote: "4 colored bins + easy prep steps"
     }
   ];
 
@@ -65,10 +65,10 @@ export default function HowItWorksPage() {
           <span>Under the Hood</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white">
-          How AI Vision Works
+          How EcoScan Works
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          From the click of your smartphone camera to actionable circular economy guidance: explore our end-to-end multi-modal architecture.
+          From taking a picture on your phone to finding the right recycling bin: here is how our system works step-by-step.
         </p>
       </div>
 

@@ -6,39 +6,39 @@ export const DEMO_ITEMS = [
     icon: "🥤",
     category: "Plastic",
     bin: "recyclable",
-    material: "PET (Polyethylene Terephthalate) #1",
+    material: "Clear Bottle Plastic (PET #1)",
     recyclability: "easy",
-    tip: "Empty liquid, rinse quickly, and leave cap on before tossing in the recycling bin.",
+    tip: "Empty the bottle, rinse it lightly, and leave the cap on before tossing in the recycling bin.",
     decompositionTime: "450 years",
-    whyItMatters: "PET plastic never truly biodegrades; it breaks into toxic microplastics that contaminate soil and marine food chains.",
+    whyItMatters: "Plastic bottles never rot away completely. Instead, they break into tiny plastic pieces that hurt soil, rivers, and sea animals.",
     howToPrepare: [
-      "Empty all remaining liquids completely",
-      "Rinse lightly to remove sugary residues",
-      "Crush slightly to save transport volume",
-      "Keep the plastic screw-on cap attached"
+      "Pour out all leftover drinks completely",
+      "Rinse with a splash of water to wash out sticky sugar",
+      "Squeeze the bottle a bit to save bin space",
+      "Keep the plastic cap screwed on tight"
     ],
     prosOfRightDisposal: [
-      "Saves up to 66% of the energy needed to manufacture virgin plastic",
-      "Reduces crude oil extraction by 3.8 barrels per ton recycled",
-      "Prevents durable polymers from choking ocean marine life"
+      "Saves up to 66% of the energy needed to make brand-new plastic",
+      "Saves precious natural oil and raw materials",
+      "Keeps plastic trash from harming sea turtles and fish"
     ],
     consOfWrongDisposal: [
-      "Persists in landfills for up to 5 centuries",
-      "Fragments into microplastics absorbed by wildlife",
-      "Takes up critical landfill volume and leaches additives"
+      "Sits in trash dumps for over 400 years",
+      "Breaks into tiny plastic bits eaten by birds and fish",
+      "Fills up valuable space in local garbage dumps"
     ],
     afterRecyclingItBecomes: [
-      "Recycled polyester clothing & fleece jackets",
-      "Carpet backing & automotive acoustic felt",
-      "New 100% rPET beverage bottles"
+      "Recycled jackets, t-shirts, and fleece blankets",
+      "Car floor mats and soft carpet stuffing",
+      "New recycled water and juice bottles"
     ],
     reuseIdeas: [
-      "Create a self-watering seed planter for herbs",
-      "Make a backyard wild bird feeder with two wooden spoons",
-      "Use as a funnel for workshop liquids or grains"
+      "Cut in half to make an easy seed planter for small herbs",
+      "Make a simple backyard bird feeder with wooden spoons",
+      "Use as a handy funnel for water or dry rice"
     ],
-    funFact: "Recycling just 5 plastic soda bottles provides enough spun fiber to make one cozy ski fleece!",
-    commonMistake: "Tossing the cap separately in trash; modern recycling sorting equipment wants the cap on."
+    funFact: "Recycling just 5 plastic soda bottles makes enough soft fiber for one cozy ski fleece jacket!",
+    commonMistake: "Throwing the cap away separately. Modern recycling machines want the cap screwed on."
   },
   {
     id: "aluminum-can",
@@ -47,39 +47,39 @@ export const DEMO_ITEMS = [
     icon: "🥫",
     category: "Metal",
     bin: "recyclable",
-    material: "Aluminum Alloy 3004",
+    material: "Recyclable Can Metal (Aluminum)",
     recyclability: "easy",
-    tip: "Rinse out beverage residue; no need to crush flat so optical sorters can recognize it.",
+    tip: "Rinse out any leftover soda. Leave the pull-tab on and put it in the green recycling bin.",
     decompositionTime: "200 - 500 years",
-    whyItMatters: "Bauxite ore mining for raw aluminum causes massive deforestation; recycling aluminum uses 95% less energy.",
+    whyItMatters: "Mining raw metal from the ground cuts down forests and uses huge amounts of energy. Recycling cans uses 95% less energy.",
     howToPrepare: [
-      "Empty all remaining liquid contents",
-      "Quick rinse with cold water",
-      "Leave the pull-tab attached to the lid",
+      "Empty out any remaining drink",
+      "Give it a quick rinse with cold water",
+      "Keep the pull-tab attached to the lid",
       "Place clean can into the green recycling bin"
     ],
     prosOfRightDisposal: [
-      "Infinitely recyclable with zero loss of quality or strength",
-      "Recycled can returns to store shelves as a new can in only 60 days",
-      "Eliminates 95% of greenhouse emissions compared to raw smelting"
+      "Can be recycled again and again forever without losing any strength",
+      "A recycled can can be back on store shelves as a new can in just 60 days",
+      "Cuts 95% of air pollution compared to making new metal from rock"
     ],
     consOfWrongDisposal: [
-      "Bauxite mining causes toxic red-mud waste dams",
-      "Wastes valuable non-renewable metal in landfills",
-      "Requires high-voltage energy grid to replace with virgin aluminum"
+      "Mining raw ore creates toxic red mud and harms nature",
+      "Wastes valuable metal that never rots in a trash dump",
+      "Forces power plants to burn extra fuel to make new metal"
     ],
     afterRecyclingItBecomes: [
-      "Brand new beverage cans",
-      "Bicycle frames and aerospace components",
-      "Architectural window frames and aluminum siding"
+      "Brand-new soda and juice cans",
+      "Bicycle frames and lightweight metal parts",
+      "Window frames and home building panels"
     ],
     reuseIdeas: [
-      "Pencil and paintbrush organizer on desk",
-      "Mini tabletop succulent pots with drain holes",
+      "Desk organizer for pens, pencils, and paintbrushes",
+      "Mini tabletop plant pot with drain holes poked at the bottom",
       "Garden plant label markers cut from aluminum sheet"
     ],
-    funFact: "75% of all aluminum ever produced in human history is still in productive use today!",
-    commonMistake: "Crushing cans entirely flat; flat 2D disks sometimes get mistakenly sorted into paper streams."
+    funFact: "About 75% of all aluminum ever made in human history is still being used today!",
+    commonMistake: "Crushing cans totally flat. If a can is flat like paper, sorting machines might mistake it for cardboard."
   },
   {
     id: "banana-peel",
@@ -88,38 +88,38 @@ export const DEMO_ITEMS = [
     icon: "🍌",
     category: "Organic",
     bin: "organic",
-    material: "Organic Plant Biomass",
+    material: "Natural Fruit & Plant Scrap",
     recyclability: "easy",
-    tip: "Remove any small plastic price stickers before placing in the compost bin.",
+    tip: "Peel off any tiny plastic fruit price stickers before placing in the brown compost bin.",
     decompositionTime: "2 - 4 weeks",
-    whyItMatters: "Food scraps trapped in anaerobic landfills emit methane — a greenhouse gas 28x more potent than carbon dioxide.",
+    whyItMatters: "When food scraps get trapped in giant trash dumps without air, they release harmful gases that warm our planet.",
     howToPrepare: [
-      "Peel off and discard the tiny plastic produce label",
-      "Chop into 2-inch chunks for faster microbial action",
-      "Drop into your brown/organic compost caddy"
+      "Peel off and discard the tiny plastic produce price label",
+      "Chop into smaller chunks so it rots into rich soil faster",
+      "Drop into your brown compost bin or garden compost pile"
     ],
     prosOfRightDisposal: [
-      "Enriches farm soil with potassium, nitrogen, and magnesium",
-      "Eliminates potent methane emissions from municipal landfills",
-      "Replaces chemical fertilizers and retains moisture in soil"
+      "Turns into rich dark soil full of natural plant food (potassium and calcium)",
+      "Stops bad greenhouse gases from forming in trash dumps",
+      "Helps garden soil stay moist without costly chemical fertilizers"
     ],
     consOfWrongDisposal: [
-      "Decomposes anaerobically in landfills producing methane gas",
-      "Wastes rich organic macro-nutrients and carbon matter",
-      "Produces toxic landfill leachate that threatens groundwater"
+      "Rots without fresh air in landfills, creating heat-trapping gases",
+      "Wastes rich natural plant food that gardens and farms need",
+      "Produces smelly liquids that can seep into ground water"
     ],
     afterRecyclingItBecomes: [
-      "Nutrient-rich organic compost and soil conditioner",
-      "Renewable biogas energy via municipal anaerobic digesters",
-      "Natural slow-release nitrogen fertilizer for organic farms"
+      "Rich organic garden fertilizer and dark potting soil",
+      "Clean natural bio-gas for cooking and heating",
+      "Natural slow-release plant food for healthy crops"
     ],
     reuseIdeas: [
-      "Steep peel in water for 48 hours to make potassium tea for houseplants",
-      "Rub inside of peel on leather shoes or houseplant leaves for natural shine",
-      "Bury around rose bushes to deter aphids"
+      "Soak peels in a jar of water for 2 days to make easy liquid food for houseplants",
+      "Rub the inside of the peel on leather shoes or houseplant leaves for a natural shine",
+      "Bury around rose bushes to deter garden pests naturally"
     ],
     funFact: "Banana peels are naturally packed with potassium, calcium, and magnesium, making them superfood for garden soil!",
-    commonMistake: "Leaving the tiny synthetic PLU sticker on; these stickers do not degrade and contaminate commercial compost batches."
+    commonMistake: "Leaving tiny plastic fruit price stickers on the peel. Those plastic stickers never rot and ruin clean compost batches."
   },
   {
     id: "paper",
@@ -128,38 +128,38 @@ export const DEMO_ITEMS = [
     icon: "📄",
     category: "Paper",
     bin: "recyclable",
-    material: "Cellulose Wood Fiber",
+    material: "Clean Dry Wood Fiber Paper",
     recyclability: "easy",
-    tip: "Keep paper clean and dry; greasy or wet paper fibers cannot be recycled.",
+    tip: "Keep paper clean and dry. Greasy or wet paper fibers cannot be recycled.",
     decompositionTime: "2 - 6 weeks",
-    whyItMatters: "Recycling paper saves millions of mature trees and halves the water consumption of paper mills.",
+    whyItMatters: "Recycling paper saves millions of mature trees and halves the water used by paper mills.",
     howToPrepare: [
-      "Ensure sheets are dry and free from grease or paint",
-      "Remove plastic sleeves or heavy binder clips",
-      "Flatten sheets and place neatly in bin"
+      "Ensure sheets are dry and free from grease, oil, or wet paint",
+      "Remove plastic covers or thick metal binder clips",
+      "Flatten sheets and place neatly in the green recycling bin"
     ],
     prosOfRightDisposal: [
-      "One ton of recycled paper saves 17 mature trees and 7,000 gallons of water",
-      "Uses 40% less energy than virgin pulp paper mills",
-      "Reduces chlorine-bleach water effluent in rivers"
+      "One ton of recycled paper saves 17 big trees and 7,000 gallons of water",
+      "Uses 40% less electricity than cutting down trees for wood pulp",
+      "Keeps river water clean by cutting bleaching chemicals"
     ],
     consOfWrongDisposal: [
-      "Occupies the largest single percentage of volume in many municipal landfills",
-      "Releases methane gas as it breaks down without oxygen",
-      "Forces additional logging of old-growth forests"
+      "Takes up huge amounts of space in city trash dumps",
+      "Rots under trash piles and creates greenhouse gases",
+      "Forces timber mills to cut down more wild forests for fresh wood"
     ],
     afterRecyclingItBecomes: [
-      "Cardboard boxes & shipping packaging",
+      "Cardboard shipping boxes & packaging cartons",
       "Egg cartons and fruit trays",
-      "Recycled notebook paper and tissue products"
+      "New recycled notebook paper and tissue products"
     ],
     reuseIdeas: [
-      "Shred for compost brown carbon balance or pet bedding",
-      "Use backside of printed drafts for sketch notes",
-      "Eco-friendly gift wrapping with natural twine"
+      "Shred old drafts for pet bedding or garden compost balance",
+      "Use the blank back side of printed sheets for notes and sketches",
+      "Use clean newspaper as eco-friendly gift wrap tied with natural string"
     ],
-    funFact: "Paper fibers can be repulped and recycled up to 5 to 7 times before they become too short!",
-    commonMistake: "Putting greasy pizza box lids or soiled napkins in the paper bin; oils bind to fibers and ruin entire pulp tanks."
+    funFact: "Paper fibers can be recycled 5 to 7 times before they become too short to hold together!",
+    commonMistake: "Putting greasy pizza box lids or soiled napkins in paper recycling. Oil soaks in and ruins the whole batch of paper."
   },
   {
     id: "glass-bottle",
@@ -168,39 +168,39 @@ export const DEMO_ITEMS = [
     icon: "🍾",
     category: "Glass",
     bin: "recyclable",
-    material: "Soda-Lime Silica Glass",
+    material: "Natural Silica Glass",
     recyclability: "easy",
     tip: "Rinse clean and remove metal or plastic corks/caps; paper labels can stay on.",
     decompositionTime: "1,000,000+ years",
-    whyItMatters: "Glass never degrades or leaches chemicals, and can be melted down endlessly with zero degradation.",
+    whyItMatters: "Glass is 100% natural, never leaches harmful chemicals, and can be melted into new bottles forever.",
     howToPrepare: [
-      "Pour out all liquid contents",
-      "Rinse quickly to remove syrupy or oily residue",
-      "Remove corks or metal crown caps",
-      "Deposit into glass recycling without breaking"
+      "Pour out all liquid drinks completely",
+      "Rinse quickly with water to remove syrupy or oily residue",
+      "Remove corks or metal crown bottle caps",
+      "Deposit into the glass recycling bin without breaking"
     ],
     prosOfRightDisposal: [
-      "100% recyclable infinitely without loss in purity or clarity",
-      "Every metric ton of cullet (crushed glass) saves 1.2 tons of virgin silica raw materials",
-      "Lowers glass kiln furnace melting temperatures, cutting energy usage"
+      "Can be recycled 100% forever with zero loss in cleanness or strength",
+      "Every ton of recycled glass saves 1.2 tons of raw sand and limestone",
+      "Melts at lower kiln temperatures, saving fuel and energy"
     ],
     consOfWrongDisposal: [
-      "Survives completely intact in landfills for millions of years",
-      "Takes up landfill space indefinitely with zero decomposition",
-      "Broken shards can injure sanitation staff when tossed into generic trash bags"
+      "Stays unbroken in trash dumps for millions of years",
+      "Takes up precious dump space forever without breaking down",
+      "Broken glass shards can hurt sanitation workers collecting garbage"
     ],
     afterRecyclingItBecomes: [
-      "Brand new wine, beer, and sauce bottles",
-      "Fiberglass home wall insulation",
-      "Eco-pavement asphalt additive ('glasphalt')"
+      "Brand-new juice, sauce, and soda bottles",
+      "Fiberglass insulation inside home walls",
+      "Road paving material mixed into strong smooth asphalt"
     ],
     reuseIdeas: [
-      "Propagating plant cuttings and flowers on windowsill",
-      "Refillable glass container for homemade vinaigrette or olive oil",
-      "Fairy-light ambient lantern for patio tables"
+      "Use as an indoor flower vase on a sunny windowsill",
+      "Wash well to store homemade oil, salad dressing, or dry spices",
+      "Drop battery fairy lights inside for a cozy table lamp"
     ],
-    funFact: "A modern glass bottle takes over one million years to break down in nature, making it one of the most durable materials on Earth!",
-    commonMistake: "Mixing heat-resistant Pyrex, drinking glasses, or window panes with container glass; they have different melting points and ruin the batch."
+    funFact: "Glass never wears out or rots in nature — it can be melted and reshaped countless times!",
+    commonMistake: "Mixing Pyrex baking dishes, window glass, or ceramic mugs into bottle glass. They melt at different temperatures and ruin the batch."
   },
   {
     id: "food-waste",
@@ -209,38 +209,38 @@ export const DEMO_ITEMS = [
     icon: "🍎",
     category: "Organic",
     bin: "organic",
-    material: "Biodegradable Organic Residue",
+    material: "Natural Food Scraps & Leftovers",
     recyclability: "easy",
-    tip: "Place in green/brown organic bin; never put in plastic bags unless certified compostable.",
+    tip: "Place in the brown compost bin. Never put regular plastic bags in with food waste.",
     decompositionTime: "1 - 6 months",
-    whyItMatters: "Rotting organic waste in landfills generates methane gas, accounting for 8-10% of global greenhouse emissions.",
+    whyItMatters: "Food rotting in deep garbage heaps releases methane, one of the biggest drivers of global warming.",
     howToPrepare: [
-      "Drain excess gravy or liquids",
+      "Drain off excess soups, gravy, and liquids",
       "Remove all plastic wrappers, twist-ties, and rubber bands",
-      "Place into countertop compost caddy with paper lining"
+      "Place into a small kitchen compost bucket with paper lining"
     ],
     prosOfRightDisposal: [
-      "Converts kitchen scraps into black-gold soil humus",
-      "Diverts heavy weight from municipal waste hauling trucks",
-      "Captures methane in closed biodigesters to generate clean electricity"
+      "Converts kitchen scraps into rich dark fertilizer for farmers",
+      "Keeps heavy wet garbage out of municipal garbage trucks",
+      "Traps natural gas in clean tanks to generate electricity"
     ],
     consOfWrongDisposal: [
-      "Generates noxious landfill odors and toxic leachate",
-      "Drives climate warming through methane emissions",
-      "Squanders phosphorus and nitrogen that should replenish agriculture"
+      "Creates foul odors and dirty runoff in trash dumps",
+      "Produces heat-trapping gases that warm our climate",
+      "Wastes natural plant nutrients that our soils need"
     ],
     afterRecyclingItBecomes: [
-      "Commercial certified organic farm compost",
-      "Renewable compressed natural gas (bio-CNG)",
-      "Soil moisture retainers for drought-prone gardens"
+      "Rich organic garden fertilizer and dark potting soil",
+      "Clean natural bio-gas for cooking and heating",
+      "Moisture-rich compost that protects gardens during dry spells"
     ],
     reuseIdeas: [
-      "Simmer clean vegetable peels in water for savory homemade vegetable broth",
-      "Blend citrus rinds with white vinegar for a natural kitchen degreaser",
-      "Dry and crush clean eggshells to add calcium to tomato plant soil"
+      "Simmer clean vegetable trimmings in water for tasty homemade soup broth",
+      "Blend citrus rinds with white vinegar for an all-natural kitchen degreaser",
+      "Dry and crush clean eggshells into powder to add calcium to your tomato plants"
     ],
-    funFact: "If food waste were a country, it would be the third-largest emitter of greenhouse gases in the world, behind only China and the USA!",
-    commonMistake: "Tossing regular plastic shopping bags into the organic bin; plastics contaminate whole truckloads of municipal compost."
+    funFact: "If food waste were a country, it would be the third-largest producer of greenhouse gases in the world, right after China and the USA!",
+    commonMistake: "Throwing everyday plastic shopping bags into the compost bin. Regular plastic ruins whole truckloads of rich compost."
   },
   {
     id: "plastic-bag",
@@ -249,39 +249,39 @@ export const DEMO_ITEMS = [
     icon: "🛍️",
     category: "Plastic",
     bin: "non-recyclable",
-    material: "LDPE (Low-Density Polyethylene) #4",
+    material: "Thin Plastic Film (LDPE #4)",
     recyclability: "medium",
-    tip: "Do NOT place in standard curbside bin! Return to grocery store collection bins or reuse.",
+    tip: "Do NOT place in your standard curbside bin! Return them to grocery store collection bins or reuse them.",
     decompositionTime: "10 - 20 years",
-    whyItMatters: "Thin plastic films wrap around and jam spinning sorting gears in recycling plants, shutting down facilities.",
+    whyItMatters: "Thin plastic bags wrap around spinning recycling gears and jam the machines, causing whole plants to shut down.",
     howToPrepare: [
-      "Shake out any crumbs, dirt, or receipts inside",
-      "Check if clean and completely dry",
-      "Bundle multiple bags inside one bag",
-      "Drop off at supermarket entrance plastic film collection bin"
+      "Shake out any crumbs, dirt, or old store receipts inside",
+      "Check that the bag is clean and completely dry",
+      "Stuff several clean bags inside one bag to keep them neat",
+      "Drop off at your local supermarket entrance plastic bag collection bin"
     ],
     prosOfRightDisposal: [
-      "Supermarket drop-off allows clean pelletization into composite deck boards",
-      "Prevents dangerous jams that endanger recycling facility operators",
-      "Keeps lightweight film from blowing into trees and storm drains"
+      "Supermarket drop-off bins turn clean bags into sturdy outdoor deck boards",
+      "Stops dangerous machine jams that put plant workers at risk",
+      "Stops light plastic bags from blowing into trees, parks, and storm drains"
     ],
     consOfWrongDisposal: [
-      "Jams curbside facility conveyor belts, causing costly daily shutdowns",
-      "Blows into storm drains and rivers, choking sea turtles and wildlife",
-      "Breaks down into airborne microplastic particles"
+      "Tangles up conveyor belts at recycling plants, stopping work for hours",
+      "Blows into rivers and oceans, choking fish and sea turtles",
+      "Breaks down into tiny plastic dust that pollutes air and water"
     ],
     afterRecyclingItBecomes: [
-      "Composite lumber for outdoor backyard decking (e.g. Trex)",
-      "Industrial heavy-duty trash can liners",
-      "New recycled shopping bags"
+      "Tough outdoor plastic lumber for park benches and backyard decks",
+      "Strong thick plastic trash liners for city bins",
+      "New recycled grocery shopping bags"
     ],
     reuseIdeas: [
-      "Keep in car trunk to use repeatedly for bulky items",
-      "Use as protective packing cushion when shipping fragile goods",
+      "Keep a few in your car trunk to use repeatedly for bulky shopping",
+      "Use as protective soft packing cushion when mailing fragile items in boxes",
       "Small trash can liner for bathroom wastebaskets"
     ],
-    funFact: "The average plastic shopping bag is used for only 12 minutes, but takes over 10 to 20 years to degrade in natural environments!",
-    commonMistake: "Putting plastic film in blue/green curbside recycling bins; curbside trucks do NOT accept flexible film!"
+    funFact: "The average plastic shopping bag is used for only 12 minutes, but takes over 10 to 20 years to break down outside!",
+    commonMistake: "Putting soft plastic bags into curbside blue or green recycling bins. Curbside trucks cannot handle thin plastic film!"
   },
   {
     id: "battery",
@@ -290,38 +290,38 @@ export const DEMO_ITEMS = [
     icon: "🔋",
     category: "E-Waste",
     bin: "special",
-    material: "Lithium-Ion / Alkaline Heavy Metals",
+    material: "Batteries & Heavy Metals (Hazardous)",
     recyclability: "hard",
-    tip: "DANGER: Never place in regular trash or curbside recycling! Fire hazard and toxic heavy metals.",
+    tip: "DANGER: Never toss in regular trash or home recycling! Batteries can cause truck fires and leak toxic chemicals.",
     decompositionTime: "100+ years",
-    whyItMatters: "Damaged lithium batteries cause massive truck and facility fires. Toxic cadmium, nickel, and lead leach into soil.",
+    whyItMatters: "Crushed batteries spark dangerous fires inside garbage trucks. Toxic metals like lead and cadmium can also seep into drinking water.",
     howToPrepare: [
-      "Tape over terminals with clear packing tape to prevent sparks",
-      "Store in a cool, dry plastic container until drop-off",
-      "Take to authorized electronics depot or battery recycling kiosk",
-      "Never puncture, crush, or immerse in water"
+      "Tape over the metal ends with clear tape so they cannot spark",
+      "Store in a cool, dry plastic box until you drop them off",
+      "Take to an authorized electronics store or special battery drop-off box",
+      "Never poke holes, crush, or drop batteries into water"
     ],
     prosOfRightDisposal: [
-      "Recovers critical rare minerals: cobalt, nickel, lithium, and copper",
-      "Prevents dangerous lithium fires on sanitation trucks and facilities",
-      "Protects municipal groundwater from toxic heavy metal poisoning"
+      "Recovers rare and valuable metals like lithium, cobalt, and copper",
+      "Stops dangerous chemical fires on garbage trucks and in sorting centers",
+      "Keeps poisonous heavy metals out of soil and drinking water"
     ],
     consOfWrongDisposal: [
-      "Causes catastrophic fires when crushed by trash compactor blades",
-      "Leaches sulfuric acid, lead, and mercury into surrounding soils",
-      "Depletes world supply of rare battery-grade lithium and cobalt"
+      "Sparks fierce fires when squeezed inside garbage truck compactors",
+      "Leaks harmful acids and heavy metals into neighborhood soils",
+      "Wastes rare metals needed to make electric cars and clean energy"
     ],
     afterRecyclingItBecomes: [
-      "Purified battery-grade lithium carbonate",
-      "Cobalt and nickel alloys for electric vehicle packs",
-      "Steel casings melted into structural construction rebar"
+      "Fresh lithium to power new electric cars and smartphones",
+      "Cobalt and nickel alloys for clean energy technology",
+      "Steel casings melted into strong building construction bars"
     ],
     reuseIdeas: [
       "Rechargeable batteries can be recharged 500 to 1,000 times before recycling",
-      "Test with battery voltmeter to ensure depleted before taking to kiosk"
+      "Check older batteries with a simple tester to make sure they are truly dead before recycling"
     ],
-    funFact: "Over 95% of the valuable nickel, cobalt, and lithium inside a modern lithium battery can be recovered and repurposed for new EV batteries!",
-    commonMistake: "Tossing dead AA or vape batteries into regular household garbage; battery fires in garbage trucks happen every single week."
+    funFact: "Over 95% of the valuable metals inside a modern lithium battery can be recovered and used again to build new batteries!",
+    commonMistake: "Throwing dead AA, AAA, or vape batteries into household trash. Battery fires in garbage trucks happen every single week."
   },
   {
     id: "cardboard",
@@ -330,39 +330,39 @@ export const DEMO_ITEMS = [
     icon: "📦",
     category: "Paper",
     bin: "recyclable",
-    material: "Corrugated Fluted Kraft Paper",
+    material: "Corrugated Box Paper",
     recyclability: "easy",
     tip: "Flatten all boxes completely to save space and remove excessive plastic packaging tape.",
     decompositionTime: "2 months",
-    whyItMatters: "Cardboard is one of the highest demand recyclables globally, creating strong circular economic value.",
+    whyItMatters: "Cardboard is one of the easiest and most valuable items to recycle worldwide. Flattening it keeps bins neat and saves trees.",
     howToPrepare: [
       "Remove styrofoam blocks, bubble wrap, and plastic air pillows",
       "Peel off heavy plastic shipping tape where possible",
-      "Flatten box completely so it lies flat in the bin",
+      "Flatten the box completely so it lies flat in the bin",
       "Keep dry away from rain until collection day"
     ],
     prosOfRightDisposal: [
-      "Saves 24% of the energy needed to produce virgin cardboard packaging",
-      "Diverts enormous cubic volume away from overloaded landfills",
-      "Reduces sulfur dioxide emissions in cardboard papermaking by 50%"
+      "Saves 24% of the energy needed to make new cardboard from scratch",
+      "Keeps huge bulky boxes from filling up local trash dumps",
+      "Cuts air pollution from paper mills in half"
     ],
     consOfWrongDisposal: [
-      "Fills up cubic yards of landfill volume with empty air space",
-      "Degrades anaerobically creating methane plumes",
-      "Forces extra logging of pine and spruce pulpwood trees"
+      "Fills city dump trucks with empty air space",
+      "Rots under trash heaps and creates greenhouse gases",
+      "Forces timber mills to cut down more pine and spruce trees"
     ],
     afterRecyclingItBecomes: [
-      "New corrugated shipping boxes for e-commerce",
-      "Cereal, tissue, and shoe boxes (chipboard)",
-      "Protective molded pulp corner protectors"
+      "New cardboard delivery boxes for online orders",
+      "Cereal, shoe, and tissue boxes",
+      "Protective molded cardboard corner cushions for shipping electronics"
     ],
     reuseIdeas: [
-      "Use as eco-friendly weed barrier sheet beneath garden mulch",
-      "Children's creative playhouses, forts, and craft projects",
-      "Reusable storage organizer in attic or basement shelves"
+      "Lay flat on garden beds under mulch to stop weeds naturally",
+      "Fun playhouses, forts, and craft projects for kids",
+      "Neat storage organizer in closets, attics, or garage shelves"
     ],
-    funFact: "Almost 90% of all products shipped in the United States and Europe are held in corrugated cardboard!",
-    commonMistake: "Leaving bulky boxes unflattened; unflattened boxes fill the recycling bin after just two packages."
+    funFact: "Nearly 90% of all goods shipped to stores are packed in sturdy corrugated cardboard!",
+    commonMistake: "Leaving big boxes unflattened. Just two unflattened delivery boxes can completely clog an entire recycling bin."
   }
 ];
 
@@ -382,60 +382,60 @@ export const WASTE_CATEGORIES = [
     name: "Plastics",
     icon: "🥤",
     color: "from-blue-500 to-cyan-500",
-    description: "Bottles, jugs, tubs, and packaging polymers. Always check the resin identification code.",
-    recyclability: "High for #1 & #2; Low for #3-#7",
-    commonItems: ["PET bottles", "Milk jugs", "Yogurt tubs", "Shampoo bottles"],
-    prepTip: "Rinse food residues, keep caps screwed on, avoid black plastics."
+    description: "Bottles, jugs, tubs, and packaging containers. Look for the small number printed inside the chasing arrows symbol.",
+    recyclability: "Very easy for #1 bottles and #2 jugs; hard for #3 to #7",
+    commonItems: ["Water bottles", "Milk jugs", "Yogurt tubs", "Shampoo bottles"],
+    prepTip: "Rinse out leftover food or drink, keep caps screwed on, and avoid black plastics."
   },
   {
     id: "metal",
     name: "Metals",
     icon: "🥫",
     color: "from-amber-500 to-orange-500",
-    description: "Aluminum beverage cans, steel soup tins, and clean foil. Infinitely recyclable with no loss of strength.",
-    recyclability: "Nearly 100% infinitely recyclable",
-    commonItems: ["Soda cans", "Soup cans", "Clean foil trays", "Aerosol cans (empty)"],
-    prepTip: "Quick rinse, do not crush flat, ensure aerosols are 100% empty."
+    description: "Drink cans, food tins, and clean aluminum foil. Metal can be recycled over and over without losing any strength.",
+    recyclability: "Almost 100% recyclable forever",
+    commonItems: ["Soda cans", "Soup cans", "Clean foil trays", "Empty spray cans"],
+    prepTip: "Give it a fast rinse, do not crush flat like a pancake, and make sure spray cans are fully empty."
   },
   {
     id: "paper",
     name: "Paper & Cardboard",
     icon: "📦",
     color: "from-emerald-500 to-teal-500",
-    description: "Shipping boxes, newspapers, envelopes, and office paper. Must stay clean and dry.",
-    recyclability: "Recyclable 5-7 times",
-    commonItems: ["Corrugated boxes", "Mail & office paper", "Cereal boxes", "Magazines"],
-    prepTip: "Flatten boxes, remove plastic tape & bubble wrap, keep 100% dry."
+    description: "Shipping boxes, notebook paper, letters, cereal boxes, and egg cartons.",
+    recyclability: "Very easy when clean and dry",
+    commonItems: ["Cardboard boxes", "Office paper", "Newspapers", "Cereal cartons"],
+    prepTip: "Flatten all boxes flat, keep dry from rain, and tear off any greasy pizza cheese."
   },
   {
     id: "glass",
     name: "Glass",
     icon: "🍾",
-    color: "from-teal-500 to-emerald-600",
-    description: "Bottles, jars, and beverage glass. 100% recyclable endlessly without chemical degradation.",
-    recyclability: "Infinitely recyclable",
-    commonItems: ["Beverage bottles", "Sauce jars", "Olive oil containers", "Jam pots"],
-    prepTip: "Rinse clean, remove metal lids/corks, keep intact without breaking."
+    color: "from-cyan-500 to-blue-600",
+    description: "Clear, green, and brown bottles and jars. Glass is 100% natural and can be melted into new bottles forever.",
+    recyclability: "100% recyclable forever",
+    commonItems: ["Juice bottles", "Jam jars", "Pasta sauce jars", "Drink bottles"],
+    prepTip: "Rinse clean, take off metal lids or corks, and never mix window glass or ceramic mugs."
   },
   {
     id: "organic",
-    name: "Organic & Food Waste",
-    icon: "🍌",
-    color: "from-amber-600 to-lime-600",
-    description: "Fruit peels, coffee grounds, vegetable scraps, and yard trimmings. Best sent to compost or green bins.",
-    recyclability: "100% biodegradable compost",
-    commonItems: ["Fruit & vegetable scraps", "Coffee grounds", "Eggshells", "Yard clippings"],
-    prepTip: "Remove synthetic plastic PLU stickers and rubber bands before composting."
+    name: "Food & Organics",
+    icon: "🍎",
+    color: "from-amber-600 to-yellow-600",
+    description: "Fruit and vegetable peelings, food leftovers, coffee grounds, and garden leaves.",
+    recyclability: "Turns into rich garden compost",
+    commonItems: ["Fruit peels", "Leftover food", "Coffee grounds", "Garden leaves"],
+    prepTip: "Peel off plastic stickers, drain extra liquid, and never use regular plastic bags."
   },
   {
     id: "ewaste",
-    name: "E-Waste & Hazardous",
+    name: "E-Waste & Batteries",
     icon: "🔋",
     color: "from-purple-500 to-indigo-600",
-    description: "Batteries, consumer electronics, CFL bulbs, and chemicals. Requires special municipal handling.",
-    recyclability: "Requires certified drop-off facility",
-    commonItems: ["Batteries", "Cellphones & cables", "Fluorescent bulbs", "Paint cans"],
-    prepTip: "Tape lithium battery terminals, never toss in curbside bins, take to retail kiosks."
+    description: "Old batteries, cables, broken phones, and lightbulbs. Requires special drop-off boxes.",
+    recyclability: "Needs special drop-off box",
+    commonItems: ["Batteries", "Old phones & chargers", "Lightbulbs", "Paint cans"],
+    prepTip: "Tape over battery ends, never toss in regular trash, and bring to store drop-off bins."
   }
 ];
 
@@ -447,25 +447,25 @@ export const FOUR_BINS_GUIDE = [
     badgeBg: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300",
     borderClass: "border-emerald-500",
     iconBg: "bg-emerald-500 text-white",
-    description: "Clean rigid plastics, metal cans, glass bottles, and dry paper products.",
+    description: "Clean hard plastic bottles, metal cans, glass jars, and clean dry paper products.",
     whatGoesIn: [
-      "PET #1 plastic beverage bottles (caps on)",
-      "HDPE #2 milk jugs, detergent containers",
-      "Aluminum beverage cans & clean food tins",
-      "Glass bottles & jars (rinse clean)",
-      "Flattened corrugated cardboard & clean paper"
+      "Plastic drink bottles (caps kept on)",
+      "Milk jugs and shampoo bottles",
+      "Aluminum soda cans and clean food tins",
+      "Glass drink bottles and food jars (rinsed clean)",
+      "Flattened cardboard boxes and clean dry paper"
     ],
     whatStaysOut: [
-      "Greasy pizza boxes with melted cheese",
-      "Plastic shopping bags or bubble wrap",
-      "Broken window glass, Pyrex, or ceramics",
-      "Styrofoam takeout containers",
-      "Food scraps and liquids"
+      "Greasy pizza boxes soaked with cheese and oil",
+      "Plastic grocery shopping bags and bubble wrap",
+      "Broken window glass, drinking glasses, or ceramic mugs",
+      "Styrofoam cups and takeout boxes",
+      "Food scraps and leftover liquids"
     ],
     commonMistakes: [
-      "Wishcycling: putting unrecyclable items in hoping they will be recycled",
-      "Throwing greasy or peanut-butter smeared containers in without rinsing",
-      "Bagging recyclables in black trash bags (entire bag gets trashed)"
+      "Guessing: throwing non-recyclable items in hoping they will magically get recycled",
+      "Tossing oily or peanut-butter smeared jars in without a quick rinse",
+      "Putting recyclables inside black plastic trash bags (machines throw the whole bag away)"
     ]
   },
   {
@@ -475,25 +475,25 @@ export const FOUR_BINS_GUIDE = [
     badgeBg: "bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300",
     borderClass: "border-amber-700",
     iconBg: "bg-amber-700 text-white",
-    description: "Kitchen food scraps, fruit/vegetable peels, coffee grounds, and garden clippings.",
+    description: "Kitchen food leftovers, fruit and vegetable peels, coffee grounds, and garden clippings.",
     whatGoesIn: [
-      "Fruit, vegetable, and salad scraps",
-      "Coffee grounds, filters, and loose tea leaves",
+      "Fruit peels, vegetable trimmings, and salad leftovers",
+      "Coffee grounds, paper filters, and loose tea leaves",
       "Crushed eggshells and nut shells",
-      "Lawn clippings, dry leaves, and small twigs",
-      "Certified 100% compostable paper towels"
+      "Lawn clippings, dry leaves, and small garden twigs",
+      "Uncoated brown paper napkins"
     ],
     whatStaysOut: [
-      "Plastic produce stickers on fruit skins",
-      "Plastic packaging or plastic cutlery",
+      "Plastic price stickers on fruit and vegetable skins",
+      "Plastic food wrappers and plastic forks/spoons",
       "Pet waste or cat litter",
-      "Treated or painted lumber scraps",
-      "Large quantities of cooking oil and grease"
+      "Painted wood scraps or treated lumber",
+      "Large amounts of cooking oil and grease"
     ],
     commonMistakes: [
-      "Leaving the tiny synthetic PLU stickers on citrus and banana peels",
-      "Using non-certified regular plastic shopping bags as caddy liners",
-      "Dumping cooked meat or bones into cold home compost piles (attracts rodents)"
+      "Leaving the tiny plastic fruit price stickers on banana and orange peels",
+      "Using everyday non-compostable plastic grocery bags as bin liners",
+      "Dumping large bones or cooking grease into small home compost piles"
     ]
   },
   {
@@ -503,25 +503,25 @@ export const FOUR_BINS_GUIDE = [
     badgeBg: "bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border-slate-300",
     borderClass: "border-slate-500",
     iconBg: "bg-slate-600 text-white",
-    description: "Residual waste that cannot be reclaimed, recycled, or composted by modern facilities.",
+    description: "General household trash that cannot be recycled or turned into compost.",
     whatGoesIn: [
-      "Multi-material foil chip bags & candy wrappers",
-      "Greasy pizza box bottoms soaked in oil",
-      "Expanded polystyrene (Styrofoam) cups & clamshells",
-      "Sanitary wipes, diapers, and dental floss",
-      "Broken porcelain mugs, mirrors, and window glass"
+      "Foil chip bags and shiny candy wrappers",
+      "Greasy pizza box bottoms soaked with oil",
+      "Styrofoam cups and takeout clamshell boxes",
+      "Cleaning wipes, diapers, and dental floss",
+      "Broken ceramic mugs, mirror glass, and window panes"
     ],
     whatStaysOut: [
-      "Batteries, electronics, or chargers (Fire Hazard!)",
-      "Clean recyclable bottles or cans",
-      "Organic food waste that belongs in compost",
-      "Fluorescent lamps containing mercury",
-      "Liquid chemicals, solvents, or paints"
+      "Batteries, electronics, or chargers (Fire Danger!)",
+      "Clean plastic bottles or metal cans",
+      "Food scraps that belong in the compost bin",
+      "Fluorescent tube bulbs that contain mercury",
+      "Chemical paints, oils, or liquid cleaners"
     ],
     commonMistakes: [
-      "Assuming disposable paper coffee cups are recyclable (they have waterproof plastic polyethylene liners)",
-      "Tossing electronics into the trash when a gadget breaks",
-      "Failing to separate multi-layer packaging before disposal"
+      "Thinking paper coffee cups can be recycled (most have a hidden plastic lining inside)",
+      "Tossing old electronics or gadgets into household trash",
+      "Not separating paper packaging from plastic wrappers before throwing away"
     ]
   },
   {
@@ -531,22 +531,22 @@ export const FOUR_BINS_GUIDE = [
     badgeBg: "bg-purple-100 text-purple-900 dark:bg-purple-950/60 dark:text-purple-300 border-purple-300",
     borderClass: "border-purple-600",
     iconBg: "bg-purple-600 text-white",
-    description: "Materials that pose environmental, fire, or toxic chemical hazards requiring designated drop-offs.",
+    description: "Items that can cause fires, chemical leaks, or electric danger. Must go to designated drop-off points.",
     whatGoesIn: [
-      "Lithium-ion, rechargeable, and alkaline batteries",
-      "Old smartphones, laptops, cables, and circuit boards",
-      "Compact fluorescent (CFL) bulbs & mercury thermometers",
-      "Aerosol spray cans with residual chemicals",
-      "House paints, motor oil, and pesticide containers"
+      "Rechargeable, lithium-ion, and household AA/AAA batteries",
+      "Old cellphones, laptops, chargers, and cables",
+      "Fluorescent tube bulbs and spiral energy-saver bulbs",
+      "Aerosol spray cans with leftover chemicals",
+      "House paints, motor oil, and garden pest sprays"
     ],
     whatStaysOut: [
-      "Standard everyday recyclables (bottles, clean paper)",
-      "Household organic compost scraps",
-      "Common trash that does not contain heavy metals or toxins"
+      "Everyday clean recyclables (water bottles, clean paper)",
+      "Kitchen food scraps and garden leaves",
+      "Regular trash that has no toxic chemicals or batteries"
     ],
     commonMistakes: [
-      "Throwing lithium vape pens or power banks in regular garbage (starts truck fires)",
-      "Putting fluorescent bulbs in glass bins (breaks and releases mercury vapor)",
+      "Throwing vape pens or power banks into regular garbage (causes garbage truck fires)",
+      "Putting fluorescent bulbs in glass bins (breaks and releases harmful mercury vapor)",
       "Pouring motor oil, paint, or chemical cleaners down kitchen sinks"
     ]
   }
@@ -555,26 +555,26 @@ export const FOUR_BINS_GUIDE = [
 export const FAQS = [
   {
     q: "How accurate is the EcoScan AI waste classifier?",
-    a: "EcoScan utilizes Google Gemini 2.0 multi-modal computer vision models trained specifically to identify waste categories, resin codes, materials, and municipal disposal bins. When lighting is clear, classification accuracy exceeds 94% across standard household items."
+    a: "EcoScan uses Google Gemini Vision AI to look at your photo, recognize materials, and tell you the right bin. In clear lighting, it identifies common household items with over 94% accuracy."
   },
   {
-    q: "Does EcoScan permanently store my photos?",
-    a: "No. EcoScan respects your privacy. Photos are processed ephemerally in server memory solely to analyze materials and are never stored on persistent disks, shared with third parties, or used to build facial recognition profiles."
+    q: "Does EcoScan save my photos?",
+    a: "No! Your privacy comes first. Photos are checked in temporary memory only to find the waste materials and are deleted right away. We never save your photos to hard drives or share them with anyone."
   },
   {
-    q: "What image formats and file limits are supported?",
-    a: "EcoScan accepts JPEG, PNG, and WebP images up to 5MB in size. We recommend taking clear, well-lit photos with the waste item centered in the frame."
+    q: "What image formats and file sizes work?",
+    a: "EcoScan works with JPEG, PNG, and WebP pictures up to 5MB. Just snap a clear, bright photo with the item in the center."
   },
   {
     q: "How does multi-waste detection work?",
-    a: "When a single photograph contains several distinct items (e.g. a plastic bottle next to an aluminum can and a banana peel), our multi-modal AI breaks down the spatial composition, isolates each item, and generates a structured multi-item breakdown so you can sort each piece properly."
+    a: "If your photo has several items (for example, a water bottle next to a soda can and a banana peel), our AI spots each item and gives you a list so you can sort each one into the right bin."
   },
   {
-    q: "Can I use EcoScan if the backend or AI is offline?",
-    a: "Yes! EcoScan includes a robust Demo Gallery with 9 pre-analyzed items and a multi-waste simulator that work seamlessly even when offline or when AI credentials are being configured."
+    q: "Can I use EcoScan without internet or AI?",
+    a: "Yes! EcoScan includes a built-in Demo Gallery with 9 pre-scanned items and a picnic combo that work instantly, even when offline."
   },
   {
-    q: "Why do bin colors vary in different cities?",
-    a: "While color conventions differ across municipal regions (some use blue for recyclables, others green), our 4-bin categorization focuses on functional streams: Recyclables, Organics/Compost, Non-Recyclable Landfill, and Special Hazardous Waste. We provide universal guidelines that apply everywhere."
+    q: "Why do bin colors differ in different cities?",
+    a: "Different cities sometimes use different colors, but the 4 main groups are always the same: Recyclables, Food & Compost, General Trash, and Special Hazardous Items. Our app makes it easy to know which group your item belongs to."
   }
 ];

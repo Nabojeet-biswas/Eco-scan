@@ -8,15 +8,31 @@ import {
   ShieldCheck,
   Cpu,
   Heart,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function AboutPage() {
   const techStack = [
-    { name: "Google Gemini 2.0 AI Vision", role: "Multi-modal vision inference, material detection & spatial segmentation", badge: "Core AI Engine" },
-    { name: "Spring Boot 4.x Microservice", role: "High-performance multipart streaming, validation & REST API", badge: "Backend" },
-    { name: "React 19 & Redux Toolkit Query", role: "Declarative state, instant cache invalidation & optimistic UI", badge: "Frontend" },
-    { name: "Tailwind CSS v4", role: "Design system with nature-inspired color palette & full dark mode", badge: "Styling" }
+    {
+      name: "Google Gemini 2.0 AI Vision",
+      role: "Recognizes materials and detects items in photos",
+      badge: "Core AI Engine",
+    },
+    {
+      name: "Spring Boot Microservice",
+      role: "Secure server that validates photos in memory and powers the API",
+      badge: "Backend",
+    },
+    {
+      name: "React 19 & Redux Toolkit Query",
+      role: "Fast modern web interface with instant updates",
+      badge: "Frontend",
+    },
+    {
+      name: "Tailwind CSS v4",
+      role: "Clean design system with nature colors and full dark mode",
+      badge: "Styling",
+    },
   ];
 
   return (
@@ -31,7 +47,8 @@ export default function AboutPage() {
           Our Mission &amp; Technology
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-          Building intuitive, accessible artificial intelligence to eliminate landfill contamination and empower circular communities worldwide.
+          Building easy-to-use AI to stop trash from polluting our planet and
+          help everyone recycle with confidence.
         </p>
       </div>
 
@@ -41,10 +58,15 @@ export default function AboutPage() {
           Why We Built EcoScan
         </h2>
         <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-          Over 91% of plastic ever manufactured has never been recycled. A primary obstacle is not the lack of willingness by consumers, but the sheer confusion caused by complex packaging: hidden resin codes, contradictory municipal guidelines, and multi-layer composites.
+          Over 91% of all plastic ever made has never been recycled. The main
+          problem is not that people don't care—it's that recycling is
+          confusing. Hard-to-read symbols, different local rules, and mixed
+          materials leave people guessing.
         </p>
         <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-          EcoScan was engineered to remove that friction completely. With a single smartphone photograph, our Google Gemini AI model analyzes the item’s materials, delivers clear 4-bin color-coded guidance, and teaches users the lifecycle of the packaging they consume.
+          EcoScan was built to solve this problem. Just snap a photo with your
+          phone: our AI looks at what the item is made of, points you to the
+          exact colored bin, and shares easy tips to reduce waste.
         </p>
       </div>
 
@@ -85,9 +107,12 @@ export default function AboutPage() {
             <div className="w-10 h-10 rounded-xl bg-emerald-800 flex items-center justify-center text-emerald-300">
               <TreePine className="w-5 h-5" />
             </div>
-            <h4 className="font-bold text-white text-base">Contamination First</h4>
+            <h4 className="font-bold text-white text-base">
+              Clean Recycling First
+            </h4>
             <p className="text-emerald-200/80 leading-relaxed">
-              Prioritizing bin cleanliness over optimistic wishcycling ensures collected batches can actually be processed.
+              Keeping wrong trash out of the recycling bin ensures good items
+              can actually be recycled into new products.
             </p>
           </div>
 
@@ -97,7 +122,8 @@ export default function AboutPage() {
             </div>
             <h4 className="font-bold text-white text-base">Carbon Reduction</h4>
             <p className="text-emerald-200/80 leading-relaxed">
-              Keeping organic food waste out of landfills cuts potent methane emissions that accelerate climate warming.
+              Keeping food scraps out of trash piles stops the buildup of
+              harmful greenhouse gases.
             </p>
           </div>
 
@@ -107,7 +133,8 @@ export default function AboutPage() {
             </div>
             <h4 className="font-bold text-white text-base">Ethical Privacy</h4>
             <p className="text-emerald-200/80 leading-relaxed">
-              We process all imagery ephemerally in RAM and never store or monetize personal user photographs.
+              We check your photo in temporary memory and never save, store, or
+              sell your photos.
             </p>
           </div>
         </div>

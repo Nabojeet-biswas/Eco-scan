@@ -1,7 +1,10 @@
 import React, { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
-import { useScanImageMutation, useGetStatusQuery } from "../app/services/ecoScanApi";
+import {
+  useScanImageMutation,
+  useGetStatusQuery,
+} from "../app/services/ecoScanApi";
 import { setActiveItem, startScanQueue } from "../features/eco/ecoSlice";
 import { DEMO_ITEMS } from "../data/demoData";
 import {
@@ -16,7 +19,7 @@ import {
   HelpCircle,
   ImageIcon,
   X,
-  Play
+  Play,
 } from "lucide-react";
 
 export default function ScanPage() {
@@ -29,7 +32,9 @@ export default function ScanPage() {
   const [previewUrl, setPreviewUrl] = useState(null);
   const [dragActive, setDragActive] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [scanStepMessage, setScanStepMessage] = useState("Analyzing image with Gemini Vision...");
+  const [scanStepMessage, setScanStepMessage] = useState(
+    "Checking your item with AI...",
+  );
 
   const [scanImageMutation, { isLoading: isScanning }] = useScanImageMutation();
   const { data: statusData, isError: isStatusError } = useGetStatusQuery();
@@ -43,14 +48,18 @@ export default function ScanPage() {
     // Validate size (5MB max)
     const MAX_SIZE = 5 * 1024 * 1024;
     if (file.size > MAX_SIZE) {
-      setErrorMessage("File exceeds 5MB limit. Please upload an image under 5MB.");
+      setErrorMessage(
+        "Photo is too large (over 5MB). Please upload a smaller photo under 5MB.",
+      );
       return;
     }
 
     // Validate format
     const validTypes = ["image/jpeg", "image/png", "image/webp"];
     if (!validTypes.includes(file.type)) {
-      setErrorMessage("Unsupported file format. Please upload JPEG, PNG, or WebP images.");
+      setErrorMessage(
+        "Unsupported file type. Please upload a JPEG, PNG, or WebP photo.",
+      );
       return;
     }
 
@@ -77,14 +86,19 @@ export default function ScanPage() {
     setDragActive(false);
   };
 
-  const triggerScan = async (fileToScan = selectedFile) => {
+  const triggerScan = async (fileToScan = selectedFile, customPreviewUrl = null) => {
     if (!fileToScan) return;
     setErrorMessage(null);
 
+    const activeImageUrl =
+      customPreviewUrl ||
+      previewUrl ||
+      (fileToScan instanceof Blob ? URL.createObjectURL(fileToScan) : null);
+
     // Step animation feedback
-    setScanStepMessage("Detecting waste polymers and materials...");
+    setScanStepMessage("Checking what this item is made of...");
     const stepTimer = setTimeout(() => {
-      setScanStepMessage("Matching municipal recycling rules...");
+      setScanStepMessage("Finding the right bin for your item...");
     }, 1200);
 
     try {
@@ -99,10 +113,14 @@ export default function ScanPage() {
         if (result.items && result.items.length > 0) {
           dispatch(startScanQueue(result.items));
           dispatch(setActiveItem(result.primaryItem || result.items[0]));
-          navigate("/result", { state: { result, isMulti: true, scannedImageUrl: previewUrl } });
+          navigate("/result", {
+            state: { result, isMulti: true, scannedImageUrl: activeImageUrl },
+          });
         } else {
           dispatch(setActiveItem(result));
-          navigate("/result", { state: { result, scannedImageUrl: previewUrl } });
+          navigate("/result", {
+            state: { result, scannedImageUrl: activeImageUrl },
+          });
         }
       }
     } catch (err) {
@@ -112,15 +130,19 @@ export default function ScanPage() {
       let msg = err?.data?.message;
       if (!msg) {
         if (err?.status === 400) {
-          msg = "HTTP 400: Invalid file type or corrupted image.";
+          msg = "Could not read the photo. Please try a clearer picture.";
         } else if (err?.status === 502) {
-          msg = "Live AI Vision service is currently unavailable (HTTP 502). You can explore our Demo Gallery instead.";
+          msg =
+            "AI service is temporarily busy. Please try again or explore our Demo Gallery.";
         } else if (err?.status === 503) {
-          msg = "AI mode is currently off or unavailable. You can explore our Demo Gallery instead.";
+          msg =
+            "AI mode is not active right now. Please explore our Demo Gallery instead.";
         } else if (err?.status === 500) {
-          msg = "Server encountered an error while processing the image. Please verify your backend and AI credentials.";
+          msg =
+            "Something went wrong while scanning. Please try again in a moment.";
         } else {
-          msg = "The image scan failed. Please check your network or try again.";
+          msg =
+            "Scan could not finish. Please check your internet connection or try again.";
         }
       }
       setErrorMessage(msg);
@@ -131,12 +153,15 @@ export default function ScanPage() {
   const handleSelectSample = async (sampleType) => {
     setErrorMessage(null);
     try {
-      const response = await fetch(`/images/items/${sampleType}.jpg`);
+      const samplePath = `/images/items/${sampleType}.jpg`;
+      const response = await fetch(samplePath);
       const blob = await response.blob();
-      const sampleFile = new File([blob], `${sampleType}.jpg`, { type: "image/jpeg" });
+      const sampleFile = new File([blob], `${sampleType}.jpg`, {
+        type: "image/jpeg",
+      });
       setSelectedFile(sampleFile);
-      setPreviewUrl(URL.createObjectURL(sampleFile));
-      triggerScan(sampleFile);
+      setPreviewUrl(samplePath);
+      triggerScan(sampleFile, samplePath);
     } catch (err) {
       console.warn("Could not load sample image:", err);
     }
@@ -154,7 +179,7 @@ export default function ScanPage() {
           Scan Your Waste
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
-          Snap a photo or upload an image to identify materials and see exact bin recommendations.
+          Take a photo or upload an image to find out what it's made of and which bin to use.
         </p>
       </div>
 
@@ -164,8 +189,10 @@ export default function ScanPage() {
           <div className="flex items-start gap-2.5">
             <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
             <div className="text-xs">
-              <strong className="font-bold">Live AI in Simulation Mode: </strong>
-              Google Gemini API key not configured on backend. You can still scan, or browse our instant Demo Gallery.
+              <strong className="font-bold">
+                AI in Demo Mode:{" "}
+              </strong>
+              AI is currently running with sample data. You can still scan or explore our instant Demo Gallery.
             </div>
           </div>
           <Link
@@ -186,8 +213,8 @@ export default function ScanPage() {
           dragActive
             ? "border-emerald-500 bg-emerald-500/5 scale-102"
             : previewUrl
-            ? "border-emerald-300 dark:border-emerald-700 bg-white dark:bg-slate-800"
-            : "border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/60 hover:border-emerald-400"
+              ? "border-emerald-300 dark:border-emerald-700 bg-white dark:bg-slate-800"
+              : "border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800/60 hover:border-emerald-400"
         } shadow-sm`}
       >
         {/* Hidden inputs */}
@@ -216,7 +243,7 @@ export default function ScanPage() {
             </div>
             <div className="text-center space-y-1">
               <h3 className="font-bold text-lg text-slate-900 dark:text-white">
-                Analyzing with Google Gemini...
+                Checking your item with AI...
               </h3>
               <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium animate-pulse">
                 {scanStepMessage}
@@ -253,7 +280,7 @@ export default function ScanPage() {
                 className="w-full sm:w-auto px-8 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black text-sm shadow-lg shadow-emerald-500/25 transition flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Classify Waste Now</span>
+                <span>Scan This Waste</span>
               </button>
               <button
                 onClick={() => fileInputRef.current?.click()}
@@ -310,7 +337,9 @@ export default function ScanPage() {
         <div className="bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-2xl p-4 sm:p-5 flex items-start gap-3 text-rose-900 dark:text-rose-200 animate-in fade-in">
           <AlertCircle className="w-5 h-5 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5" />
           <div className="flex-1 text-xs space-y-2">
-            <strong className="font-bold block text-sm">Scan Encountered an Issue</strong>
+            <strong className="font-bold block text-sm">
+              Could Not Complete Scan
+            </strong>
             <p>{errorMessage}</p>
             <div className="flex items-center gap-2 pt-1">
               <button
@@ -348,8 +377,12 @@ export default function ScanPage() {
               className="w-9 h-9 rounded-lg object-cover shrink-0 shadow-2xs border border-slate-200 dark:border-slate-600 group-hover:scale-105 transition-transform"
             />
             <div className="min-w-0">
-              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">Plastic Bottle</p>
-              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">Green Bin</span>
+              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">
+                Plastic Bottle
+              </p>
+              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                Green Bin
+              </span>
             </div>
           </button>
 
@@ -363,8 +396,12 @@ export default function ScanPage() {
               className="w-9 h-9 rounded-lg object-cover shrink-0 shadow-2xs border border-slate-200 dark:border-slate-600 group-hover:scale-105 transition-transform"
             />
             <div className="min-w-0">
-              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">Aluminum Can</p>
-              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">Green Bin</span>
+              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">
+                Aluminum Can
+              </p>
+              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                Green Bin
+              </span>
             </div>
           </button>
 
@@ -378,8 +415,12 @@ export default function ScanPage() {
               className="w-9 h-9 rounded-lg object-cover shrink-0 shadow-2xs border border-slate-200 dark:border-slate-600 group-hover:scale-105 transition-transform"
             />
             <div className="min-w-0">
-              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">Banana Peel</p>
-              <span className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold">Brown Bin</span>
+              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">
+                Banana Peel
+              </p>
+              <span className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold">
+                Brown Bin
+              </span>
             </div>
           </button>
 
@@ -393,8 +434,12 @@ export default function ScanPage() {
               className="w-9 h-9 rounded-lg object-cover shrink-0 shadow-2xs border border-slate-200 dark:border-slate-600 group-hover:scale-105 transition-transform"
             />
             <div className="min-w-0">
-              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">Battery</p>
-              <span className="text-[10px] text-purple-600 dark:text-purple-400 font-semibold">Special Bin</span>
+              <p className="font-bold text-xs text-slate-800 dark:text-slate-200 truncate">
+                Battery
+              </p>
+              <span className="text-[10px] text-purple-600 dark:text-purple-400 font-semibold">
+                Special Bin
+              </span>
             </div>
           </button>
         </div>
